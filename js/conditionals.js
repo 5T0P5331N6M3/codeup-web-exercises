@@ -21,17 +21,19 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-function analyzeColor(colorName) {
-    return colorName;
+
+/*function analyzeColor(colorName) {
+
+    if (colorName === "green") {
+        alert("O'Doyle Rules!");
+    } else if (colorName === "blue") {
+        alert("Politicians suck!");
+    } else {
+        alert("I don't know anything about " + colorName);
+    }
 }
-var colorName = confirm("Fave color?");
-if (green) {
-    alert("O'Doyle Rules!");
-} else if (blue) {
-    alert("Politicians suck!");
-}else {
-    alert(analyzeColor + "not all can be perfect.");
-}
+analyzeColor("blue");*/
+
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
@@ -44,22 +46,40 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-analyzeColor(randomColor);
-console.log(analyzeColor(randomColor));
+/*analyzeColor(randomColor);
+/analyzeColor(randomColor)
+    /console.log(analyzeColor);*/
+
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
-
+/*switch (randomColor) {
+    case "blue":
+        console.log(`${randomColor} is the color of the ocean.');
+ }*/
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+var color = prompt("What is your favorite color?");
 
 /* ########################################################################## */
 
+/*var color = prompt("What is your favorite color?").toLowerCase();
+function analyzeColor(color) {
+    switch (color) {
+        case "red":
+            return "apples are red"
+        case "blue":
+            return "Who is blue?"
+        default:
+            return "There are three primary colors."
+    }
+}
+alert(analyzeColor(userColor));*/
 /**
  * TODO:
  * Suppose there's a promotion in Walmart, each customer is given a randomly
@@ -109,3 +129,30 @@ console.log(analyzeColor(randomColor));
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+/*
+1. Make a "confirm" asking if user would like iputting a number.
+2. Assign "confirm" in a variable being a boolean
+3. If "confirm" variable is true, then prompt user for number and store in a variable. Wrap Number(?).
+4. Alert number as even or odd. (Implied conditional statement.)
+5. Alert what the number plus 100 equals.
+6. Alert if the number is negative or positive
+7. If user input is NaN, inform incorrect input data type.
+ */
+
+var isTrue = confirm("Pick a number");
+if(isTrue === true) {
+    var someNumber = prompt("What is the number?");
+    if (someNumber % 2 !== 0) {
+        alert("Number is even.")
+    } else if (someNumber) { //how to evaluate even or odd//
+        alert("Number is odd.")
+    }
+    var newNum = someNumber + 100;
+    alert(`${newNum} + 100 = ${newNum}`)
+    if (someNumber < 0) {
+        alert(`This number is negative ${someNumber}`);
+    } else if (someNumber > 0) {
+        alert(`This number is positive ${someNumber}`);
+    }
+}
+//instruction sucks! all over the place with too many techniques and zero consistency with formulas/explaining.

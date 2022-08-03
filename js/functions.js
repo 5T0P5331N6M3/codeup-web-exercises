@@ -23,7 +23,7 @@ sayHello('Haskell');
  */
 
 var helloMessage = sayHello("Casanova"); //string literal argument//
-//console.log('helloMessage'); No need for console.log, because it will be ran later, at the end of code.//
+//console.log('helloMessage');
 
 /**
  * TODO:
