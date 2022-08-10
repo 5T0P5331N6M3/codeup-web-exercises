@@ -205,9 +205,10 @@ function rollDice(sides) {
 //Simple Function Drills
 //Make a function called returnTwo() that returns the number 2 when called
 function returnTwo() {
- return returnTwo === 2; //need a break. this should be easy.
- console.log(returnTwo());
+ return 2;
+ console.log(returnTwo(2));
 }
+returnTwo();
 //Test this function with console.log(returnTwo())
 
 //Make a function called sayHowdy() which console.logs the string “Howdy!”
