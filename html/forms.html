@@ -8,12 +8,13 @@
 <form method="POST" action="https://request-inspector.glitch.me/">
 <!--Create text fields for email/password w/ appropriate placeholder values-->
     <label for="email">Email</label>
-    <input id="email" name="email" type="text">
+    <input id="email" name="email" type="text" placeholder="Enter email address">
     <br>
     <label>password</label>
-    <input id="password" name="password" type="text">
+    <input id="password" name="password" type="text" placeholder="Enter password">
     <br>
-    <textarea name="comment">Cool story, bro.</textarea>
+    <label for="bio">Biography</label>
+    <textarea id="bio" name="comment">Cool story, bro.</textarea>
     <br>
     <h3>How did you hear about us?</h3>
     <label for="billboard">
@@ -29,19 +30,14 @@
         Other <input id="other" type="radio" name="How did you hear about us?" value="other">
     </label>
     <h3>What web browser are you using?</h3>
-    <select name="web browser">
+<!--Didn't add label-->
+    <label for="web browser">Web Browser</label>
+    <select id="web browser">
         <option value="Apple">Safari</option>
         <option value="Google">Chrome</option>
         <option value="Mozilla">FireFox</option>
     </select>
     <button type="submit">Submit</button>
-</form>
-<!--
-Bonus
-To configure your forms to send you an email, sign up for the free plan on El Formo.
-El Formo will provide you a URL for your form's action attribute.
-When you use this action, the El Formo service will email you each form submission.
-This is a great way to get forms working online super quick!-->
 </form>
 </body>
 </html>
