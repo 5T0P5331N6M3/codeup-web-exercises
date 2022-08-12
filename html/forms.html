@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register With Us</title>
+</head>
+<body>
+<form method="POST" action="https://request-inspector.glitch.me/">
+<!--Create text fields for email/password w/ appropriate placeholder values-->
+    <label for="email">Email</label>
+    <input id="email" name="email" type="text">
+    <br>
+    <label>password</label>
+    <input id="password" name="password" type="text">
+    <br>
+    <textarea name="comment">Cool story, bro.</textarea>
+    <br>
+    <h3>How did you hear about us?</h3>
+    <label for="billboard">
+        Billboard <input id="billboard" type="radio" name="How did you hear about us?" value="billboard">
+    </label>
+    <label for="radio advertisement">
+        Radio Advertisement <input id="radio advertisement" type="radio" name="How did you hear about us?" value="radio advertisement">
+    </label>
+    <label for="internet advertisement">
+        Internet Advertisement <input id="internet advertisement" type="radio" name="How did you hear about us?" value="internet advertisement">
+    </label>
+    <label for="other">
+        Other <input id="other" type="radio" name="How did you hear about us?" value="other">
+    </label>
+    <h3>What web browser are you using?</h3>
+    <select name="web browser">
+        <option value="Apple">Safari</option>
+        <option value="Google">Chrome</option>
+        <option value="Mozilla">FireFox</option>
+    </select>
+    <button type="submit">Submit</button>
+</form>
+<!--
+Bonus
+To configure your forms to send you an email, sign up for the free plan on El Formo.
+El Formo will provide you a URL for your form's action attribute.
+When you use this action, the El Formo service will email you each form submission.
+This is a great way to get forms working online super quick!-->
+</form>
+</body>
+</html>
