@@ -15,7 +15,9 @@ body {
 Search how to manipulate the position, sizing of this background image.*/
 body {
     background-image: url(../img/light-my-fire.jpg);
-    background-size: cover;
+    background-size: 100px 80px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 /*Add a style to change the list-style to something other than the default bullet*/
 ul {
