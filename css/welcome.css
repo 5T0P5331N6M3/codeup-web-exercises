@@ -14,24 +14,12 @@ body {
 /*Add a style to add a background image to your background.
 Search how to manipulate the position, sizing of this background image.*/
 body {
-    background-image: url("../img/Cas-background-Art.JPG");
+    background-image: url(../img/light-my-fire.jpg);
+    background-size: cover;
 }
 /*Add a style to change the list-style to something other than the default bullet*/
 ul {
     list-style-type: square;
-    text-align: center;
-}
-
-li {
-    text-align: center;
-}
-
-ol {
-    text-align: center;
-}
-
-h2 {
-    text-align: center;
 }
 /*Add a style to change the font for the entire page.
 Use google fonts if you would like (see hyperlink)*/
