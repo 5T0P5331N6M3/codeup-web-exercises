@@ -1,5 +1,67 @@
-.fancy-header {
-    color: purple; /* single line comment */
-    text-decoration: underline;
+/*Center the main heading*/
+h1 {
+    text-align: center;
 }
 
+/*Add a style changing the color of headers on page; make them underlined*/
+.fancy-header {
+    color: chartreuse;
+}
+/*Add a style to change the background color of the page*/
+body {
+    background-color: #AF25E5FF;
+}
+/*Add a style to add a background image to your background.
+Search how to manipulate the position, sizing of this background image.*/
+body {
+    background-image: url("../img/Cas-background-Art.JPG");
+}
+/*Add a style to change the list-style to something other than the default bullet*/
+ul {
+    list-style-type: square;
+    text-align: center;
+}
+
+li {
+    text-align: center;
+}
+
+ol {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+/*Add a style to change the font for the entire page.
+Use google fonts if you would like (see hyperlink)*/
+body {
+    font-family: Verdana;
+}
+/*Add a style to change the table, table cells td and rows tr padding and font sizes*/
+table, td, tr, th {
+    border: 2px solid;
+}
+/*Add a style to alter the anchor tags and its different states.
+(e.g. link, visited, hover and active)*/
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: red;
+}
+
+a:hover {
+    color: chartreuse;
+}
+
+a:active {
+    color: lightpink;
+}
+/*Continue experimenting with styles to increase the visual appeal of the pageh1*/
+
+h4 {
+    text-align: center;
+
+}
