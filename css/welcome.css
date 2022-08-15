@@ -20,9 +20,25 @@ body {
     background-repeat: no-repeat;
 }
 /*Add a style to change the list-style to something other than the default bullet*/
-ul {
-    list-style-type: square;
+ul.a {
+    text-align: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
+ol.b {
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+ul.c {
+    text-align: right;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+con
 /*Add a style to change the font for the entire page.
 Use google fonts if you would like (see hyperlink)*/
 body {
@@ -55,3 +71,4 @@ h4 {
     text-align: center;
 
 }
+/*--------------------------------------------*/
