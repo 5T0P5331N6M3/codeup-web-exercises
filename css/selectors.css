@@ -14,17 +14,24 @@
 }
 
 /* selector for all "em" elements */
-em {
+body {
     font-weight: bold;
+    font-size: 2.5em;
 }
+/*Is this right?*/
+
+/*The pre-built formula requesting my input of a "selector for all "em" elements" doesn't have a great example
+from the reading material. Zero formula from reading material, and W3 has "em" inside curly braces, which this
+exercise is not asking to change. How do I do this?*/
 
 /* selector for all elements with class="article" */
-article {
+body.article {
     clear:both;
 }
 
 /*  selector for all "anchor" elements
     that are a direct child of an element with class="article" */
- {
+#container section.article {
     float:right;
 }
+/*I"m lost here. Sorry, but the reading material lacks examples for such TODOs to do. MDW and W3 had me search w/o luck.*/
