@@ -6,6 +6,8 @@ h1 {
 /*Add a style changing the color of headers on page; make them underlined*/
 .fancy-header {
     color: chartreuse;
+    text-decoration: underline;
+    text-align: center;
 }
 /*Add a style to change the background color of the page*/
 body {
@@ -21,7 +23,7 @@ body {
 }
 /*Add a style to change the list-style to something other than the default bullet*/
 ul.a {
-    text-align: left;
+    text-align: center;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -33,7 +35,7 @@ ol.b {
     padding: 0;
 }
 ul.c {
-    text-align: right;
+    text-align: center;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -47,6 +49,7 @@ body {
 /*Add a style to change the table, table cells td and rows tr padding and font sizes*/
 table, td, tr, th {
     border: 2px solid;
+
 }
 /*Add a style to alter the anchor tags and its different states.
 (e.g. link, visited, hover and active)*/
