@@ -48,6 +48,7 @@ body {
 }
 /*Add a style to change the table, table cells td and rows tr padding and font sizes*/
 table, td, tr, th {
+    font-family: fantasy;
     border: 2px solid;
 
 }
