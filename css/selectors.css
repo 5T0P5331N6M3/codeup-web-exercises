@@ -4,7 +4,6 @@
     width: 500px;
     padding: 10px;
 }
-
 /*  selector for all "h1" elements
     that are a descendent of id="container"
     and have a class of "fancy-header" */
@@ -14,24 +13,26 @@
 }
 
 /* selector for all "em" elements */
-body {
+ em {
     font-weight: bold;
-    font-size: 2.5em;
 }
-/*Is this right?*/
-
-/*The pre-built formula requesting my input of a "selector for all "em" elements" doesn't have a great example
-from the reading material. Zero formula from reading material, and W3 has "em" inside curly braces, which this
-exercise is not asking to change. How do I do this?*/
-
 /* selector for all elements with class="article" */
-body.article {
+.article {
     clear:both;
 }
 
 /*  selector for all "anchor" elements
     that are a direct child of an element with class="article" */
-#container section.article {
+#article>a:last-child {
     float:right;
 }
-/*I"m lost here. Sorry, but the reading material lacks examples for such TODOs to do. MDW and W3 had me search w/o luck.*/
+/*Anchors (<a></a>) are children; Article is parent*/
+/*Course material shows "Direct-Child Selector using #container>h1 as an example*/
+/*How do annotate anchor tags?*/
+/*"Anchors: Can link to individual elements by specifying the "id" of the element preceded by a "#".*/
+/*id of element = container, or article = #container*/
+/*Still, how do I annotate "anchor"?*/
+/*Pseudo Class? #article>a:link doesn't work.*/
+/* a:last-child?*/
+/*Maybe think Specificity due to "article" being used before, unless the preceding annotation makes "article" different for each.*/
+/*?????*/

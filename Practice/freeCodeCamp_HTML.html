@@ -4,14 +4,43 @@
         <title>CatPhotoApp</title>
     </head>
     <body>
-    <h2>CatPhotoApp</h2>
+<!--Style Block-->
+<!--Changed h2 with style block versus using inline inside opening tag of h2-->
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <style>
+
+        .silver-background {
+            background-color: silver;
+        }
+        .thick-green-border {
+            border-color: green;
+            border-width: 10px;
+            border-style: solid;
+            border-radius: 50%;
+        }
+        .smaller-image {
+            width: 100px;
+        }
+        .red-text {
+            color: red;
+        }
+        p {
+            font-size: 16px;
+        font-family: monospace;
+        }
+        h2 {
+            font-family: Lobster, monospace;
+            background-color: blue;
+        }
+    </style>
+    <h2 class="red-text">CatPhotoApp</h2>
     <main>
         <h3>Cat Photos</h3>
     <!--TODO: Add link to cat photos-->
-        <p>Click here to view more <a href="#" target="_blank">cat photos</a>.</p>
-        <a href="#"><img src="https://fcc.im/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+        <p class="red-text">Click here to view more <a href="#" target="_blank">cat photos</a>.</p>
+        <a href="#"><img class="smaller-image thick-green-border" src="https://fcc.im/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
         <h3>Cat Lists</h3>
-        <div class="lists">
+        <div class="lists silver-background">
             <p>Things cats <em>love</em>:</p>
             <ul>
                 <li>cat nip</li>
@@ -27,7 +56,7 @@
             </ol>
         </div>
         <img src="cats.jpg" alt="Cats">
-        <form action="/submit-cat-photo">
+        <form id="cat-photo-form" action="/submit-cat-photo">
             <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor" checked> indoor</label><br>
             <label for="outdoor"><input id ="outdoor" type="radio" name="indoor-outdoor"> outdoor</label><br>
             <label for="loving"><input id="loving" type="checkbox" name="personality" checked>Loving</label><br>
