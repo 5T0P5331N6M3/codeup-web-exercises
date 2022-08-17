@@ -84,39 +84,38 @@ a {
     color: var(--main-link-color);
 }
 .profile-details {
-    float: bottom;
-    width: 25%;
+    float: left;
+    width: calc(25% - 1em);
     margin: 0 .5em;
 }
 .timeline {
     float: left;
-    width: calc(50% - 80px);
+    width: calc(50% - 1em);
     margin: 0 .5em;
 }
 .who-to-follow {
-    float: bottom;
-    width: 25%;
+    float: right;
+    width: calc(25% - 1em);
     margin: 0 .5em;
 }
-#container {
-    padding: 2em;
+.container {
+   margin-top: 2em;
 }
 .media {
     width: 100%;
-    background-color: beige;
-    border-bottom: 1px;
-    --separator-color: red;
+    background-color: var(--light-bg);
+    border-bottom: 1px solid var(--separator-color);
     padding: .5em;
     overflow: auto;
 }
 .media-image {
-    float: right;
-    width: 50%;
+    float: left;
+    width: 50px;
     margin: 1.33em;
 }
 .media-body {
     float: left;
-    width: calc(100% - 80px);
+    width: calc(100% - 50px);
 }
 .profile-items {
     list-style-type: none;
