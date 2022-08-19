@@ -21,27 +21,32 @@ nav {
 .follow-us {
     font-size: small;
     display: flex;
-    /*justify-content: flex-end;*/
+    justify-content: flex-end;
     font-weight: bold;
-    padding: 1em;
 /*Having trouble justifying content with far-right icons; will have to join ul's*/
+/*Changed "follow-us" class from div to ul, but no result.*/
+    align-items: center;
+    margin:
 }
-.icons {
-
-}
-.logo {
-    font-family: 'Montserrat', sans-serif;
-    text-decoration: 3em;
-    padding: .2em;
-    /*justify-content: center;*/
-    margin: auto;
-}
+/*.icons {*/
+/*    display: flex;*/
+/*    justify-content: flex-end;*/
+/*}*/
+/*.logo {*/
+/*    font-family: 'Montserrat', sans-serif;*/
+/*    text-decoration: 3em;*/
+/*    padding: .2em;*/
+/*    !*justify-content: center;*!*/
+/*    margin: auto;*/
+/*}*/
 /*Logo may need to be an h3*/
 .menu {
     list-style-type: none;
     justify-content: space-between;
     /*text-decoration: none;*/
     font-size: small;
+    /*align-items: center;*/
+/*Need to center anchors; too high.*/
 }
 a:link {
     text-decoration: none;
@@ -51,8 +56,10 @@ a:hover {
 }
 .top-header{
     display: flex;
-    justify-content: space-between;
+    /*justify-content: center;*/
     /*text-decoration: none;*/
+    align-self: center;
+    flex-grow: 2;
 }
 ul {
     list-style-type: none;
@@ -61,3 +68,5 @@ ul {
     display: flex;
     /*text-decoration: none;*/
 }
+/*Very important opening a new localhost site,
+because my changes did not reflect on the localhost I'd been viewing prior to realizing.*/
