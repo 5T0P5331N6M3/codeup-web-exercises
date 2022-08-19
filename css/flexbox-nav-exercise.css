@@ -5,13 +5,13 @@ a {
     padding: .5em;
     font-family: 'Work Sans', sans-serif;
 }
-a.follow-us {
-    font-size: small;
-    /*display: flex;*/
-    /*justify-content: flex-end;*/
-    font-weight: bold;
-    /*align-items: flex-end;*/
-}
+/*a.follow-us {*/
+/*    font-size: small;*/
+/*    !*display: flex;*!*/
+/*    !*justify-content: flex-end;*!*/
+/*    font-weight: bold;*/
+/*    !*align-items: flex-end;*!*/
+/*}*/
 body {
     box-sizing: border-box;
 }
@@ -21,25 +21,30 @@ nav {
 .follow-us {
     font-size: small;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     font-weight: bold;
 /*Having trouble justifying content with far-right icons; will have to join ul's*/
 /*Changed "follow-us" class from div to ul, but no result.*/
     align-items: center;
     margin:
 }
-/*.icons {*/
-/*    display: flex;*/
-/*    justify-content: flex-end;*/
-/*}*/
-/*.logo {*/
-/*    font-family: 'Montserrat', sans-serif;*/
-/*    text-decoration: 3em;*/
-/*    padding: .2em;*/
-/*    !*justify-content: center;*!*/
-/*    margin: auto;*/
-/*}*/
+.icons {
+    display: flex;
+    justify-content: flex-end;
+}
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: 3em;
+    padding: .2em;
+    /*justify-content: center;*/
+    margin: auto;
+}
 /*Logo may need to be an h3*/
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: 3em;
+    padding: .2em;
+}
 .menu {
     list-style-type: none;
     justify-content: space-between;
