@@ -26,7 +26,7 @@ nav {
 /*Having trouble justifying content with far-right icons; will have to join ul's*/
 /*Changed "follow-us" class from div to ul, but no result.*/
     align-items: center;
-    margin:
+    /*margin:*/
 }
 .icons {
     display: flex;
