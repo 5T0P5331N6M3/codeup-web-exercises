@@ -47,9 +47,9 @@ body {
     font-family: Verdana;
 }
 /*Add a style to change the table, table cells td and rows tr padding and font sizes*/
-table, td, tr, th {
+td, th {
     font-family: fantasy;
-    border: 2px solid;
+    border: 5px solid;
 
 }
 /*Add a style to alter the anchor tags and its different states.
