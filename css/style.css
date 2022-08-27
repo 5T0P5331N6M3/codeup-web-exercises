@@ -1,4 +1,92 @@
 .fancy-header {
     color: purple; /* single line comment */
     text-decoration: underline;
+    text-align: center;
+}
+
+.slogan{
+    text-align: center;
+}
+
+h1, h2 {
+    color: darkgreen;
+    text-decoration: underline;
+}
+
+* {
+    background-color: orange;
+    background-image: url("../img/light-my-fire.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top;
+    background-size: 800px 900px;
+    font-family: fantasy, "Sama Gurmukhi", sans-serif;
+/*Problem with background image showing, again.*/
+}
+
+li {
+    list-style-type: none;
+}
+
+table {
+    border: 3px solid darkred;
+    padding: 1rem;
+    border-spacing: .5rem;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td {
+    padding: .5rem;
+    border: 1px solid black;
+}
+
+th {
+    border: 1px solid black;
+    padding: .5rem;
+}
+
+tr {
+    border: 1px solid black;
+    padding: .5rem;
+}
+
+a:link {
+    color: #333333;
+}
+
+a:hover {
+    color: darkred;
+}
+
+a:active {
+    color: blue;
+}
+
+.core-values {
+    text-align: left;
+}
+
+.process {
+    text-align: center;
+}
+
+.vision {
+    text-align: right;
+}
+
+.company-vision {
+    text-align: center;
+}
+
+.product {
+    text-align: center;
+}
+
+.product-choice {
+    margin: auto;
+}
+
+.four-square {
+    margin: auto;
 }
