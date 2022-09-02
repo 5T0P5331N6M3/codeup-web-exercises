@@ -5,6 +5,10 @@
     <title>DOM: Query and Modify</title>
 </head>
 <body>
+<button id="btn1" type="button">Hodor</button>
+<button id="btn2" type="button">Hodor</button>
+<button id="btn3" type="button">Hodor</button>
+<button id="btn4" type="button">Hodor</button>
 
 <h1 id="main-header">Hello World!</h1>
 <ul>
@@ -26,7 +30,7 @@
 </p>
 
 <script>
-    (function() {
+    (function () {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
         let mainHeader = document.getElementById("main-header");
@@ -63,8 +67,27 @@
         console.log(subParagraph);
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraph.innerHTML = "Mission Accomplished!";
+        subParagraph[0].innerHTML = "Mission Accomplished!";
         console.log(subParagraph.innerHTML);
+
+        // TODO: Add 4 buttons to the page.
+        // TODO: Attach click event listeners to each of the buttons and have the handlers perform the modifications that were automatically taking place. For example, the first button should set inner html of mainHeader to "JavaScript is Cool".
+        //target.addEventListener(event, function, useCapture);
+
+        // document.getElementById("btn1").addEventListener("click", listener);
+        let btn1 = document.getElementById("btn1");
+        btn1.addEventListener("click", function (){});
+        // btn1.addEventListener("click", listener);
+        //
+        let btn2 = document.getElementById("btn2");
+        // btn1.addEventListener("click", listener);
+        //
+        let btn3 = document.getElementById("btn3");
+        // btn1.addEventListener("click", listener);
+        //
+        let btn4 = document.getElementById("btn4");
+        // btn1.addEventListener("click", listener);
+
     })();
 </script>
 </body>
