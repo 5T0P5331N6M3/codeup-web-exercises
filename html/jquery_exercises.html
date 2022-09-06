@@ -46,31 +46,6 @@
 <script>
     "use strict";
     //TODO:Remove your custom jQuery code from previous exercises.
-
-    //TODO:Add jQuery code that will change the background color of an h1 element when clicked.
-    // var header = $("#header");
-
-    $("h1").click(function () {
-        console.log("h1 color change on click");
-        $("h1").css("background", "orange");
-        // console.log($("#header").css("background", "red"));
-    })
-    // TODO:Make all paragraphs have a font size of 18px when they are double clicked.
-    $("p").dblclick(function () {
-        $("p").css("font-size", "18px");
-    })
-    //TODO:Set all li text color to red when the mouse is hovering; reset to black when it is not.
-    $("li").hover
-    (function () {
-            $(this).css("color", "red");
-        },
-        function () {
-            $(this).css("color", "black");
-        }
-    );
-
-
-    //First JQuery Exercise below
     // // $(function () {
     // //     alert("Ready to eat healthy?");
     // // });
@@ -95,6 +70,26 @@
     // let siren3 = $("h1").html();
     // alert(siren3);
     // // alert($("h1").html());
+    //TODO:Add jQuery code that will change the background color of an h1 element when clicked.
+
+    $("h1").click(function () {
+        console.log("h1 color change on click");
+        $("h1").css("background-color", "orange");
+    })
+    // TODO:Make all paragraphs have a font size of 18px when they are double clicked.
+    $("p").dblclick(function () {
+        $("p").css("font-size", "18px");
+    })
+    //TODO:Set all li text color to red when the mouse is hovering; reset to black when it is not.
+    $("li").hover
+    (function () {
+            $(this).css("color", "red");
+        },
+        function () {
+            $(this).css("color", "black");
+        }
+    );
+
 
 </script>
 </body>
