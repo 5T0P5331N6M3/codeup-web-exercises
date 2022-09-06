@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Keyboard Events Lecture</title>
+</head>
+<body>
+    <h1>Click me to turn me red.</h1>
+    <p>Please type something into this form:</p>
+    <form>
+        <input type="text" id="textfield" name="textfield" placeholder="Type Here"/>
+    </form>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script>
+        // //Keydown Event
+        $('#textfield').keydown(function () {
+            console.log('Keydown Event!');
+        });
+        // // //Keypress Event
+        $('#textfield').keydown(function () {
+            console.log('Keypress Event!');
+        });
+        //Keyup Event
+        $('#textfield').keyup(function () {
+            console.log('Keyup Event!');
+            alert("keyup event");
+        });
+        $("h1").on('click', function() {
+            $(this).css("color", "red");
+            console.log("h1 turns red");
+        });
+        //Having trouble with click off using course reading material example.
+        $("h1").off('click', function() {
+            $(this).css("color", "black");
+            console.log("clicked off");
+        }
+        );
+
+</script>
+</body>
+</html>
