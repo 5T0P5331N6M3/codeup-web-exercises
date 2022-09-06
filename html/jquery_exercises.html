@@ -5,18 +5,113 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Ugly Organics</title>
 </head>
 <body>
-
+<div id="main">
+    <h1 class="fancy-header">Ugly Organics</h1>
+    <hr>
+    <h2 class="sub-header">Misfit Food Awaits Your Senses</h2>
+</div>
+<br>
+<p>Try our recipes at Ophelia's Bistro in Denton, Texas!</p>
+<br>
+<div id="codeup">
+    <h3 class="codeup">Current Produce Available</h3>
+    <ul class="current-list">
+        <li>Mini Bell Peppers</li>
+        <li>Leeks</li>
+        <li>Cucumbers</li>
+        <li>Spinach</li>
+        <li>Alfalfa Sprouts</li>
+        <li>Broccoli Sprouts</li>
+        <li>Japanese Sweet Potato</li>
+        <li>Jersey Sweet Potato</li>
+    </ul>
+    <h3 class="codeup">Produce Currently Growing</h3>
+    <ul class="future-list">
+        <li>Oyster Mushrooms</li>
+        <li>Russet Potatoes</li>
+        <li>Peas</li>
+        <li>Pea Sprouts</li>
+        <li>Sunflower Sprouts</li>
+        <li>Assorted Micro-greens</li>
+        <li>Wheatgrass</li>
+        <li>Purple Sweet Potato</li>
+    </ul>
+</div>
 <!--jQuery CDN-->
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
     "use strict";
-    $(function() {
-        alert("The DOM finished loading!");
-    });
+    // $(function () {
+    //     alert("Ready to eat healthy?");
+    // });
+    // let siren = $("#main").html();
+    // alert(siren);
+    // let siren2 = $("#container").html();
+    // alert(siren2);
+    // $(function () {
+    //     alert("How do I alert an ID?");
+    // })
+    $("*").css("textAlign", "center");
+    $(".fancy-header").css("color", "green");
+    $(".sub-header").css("color", "darkgreen");
+    $("li").css("list-style", "none").css("font-size", "20px");
+    // $("h1").css("background-color", "yellow");
+    // $("p").css("background-color", "yellow");
+    // $("li").css("background-color", "yellow");
+    $("h1, p, li").css("background-color", "yellow");
+    // $(".codeup").css("color", "blue")
+    // $(".codeup").css("color", "red")
+    // $(".codeup").css("border", " 1px solid red")
+    let siren3 = $("h1").html();
+    alert(siren3);
+    // alert($("h1").html());
+
 </script>
 </body>
 </html>
+<!--Exercises
+Continue working in jquery_exercises.html for these exercises. Make sure you are committing your changes to GitHub.
+
+Id Selectors
+
+1.Create content in your HTML file using at least the following elements: h1, p, ul, li, div.
+
+2.Add several attributes to your elements; you will need both id and class attributes.
+
+3.Use jQuery to select an element by the id. Alert the contents of the element.
+
+4.Update the jQuery code to select and alert a different id.
+
+5.Use the same id on 2 elements. How does this change the jQuery selection?
+
+6.Remove the duplicate id. Each id should be unique on that page.
+
+Class Selectors
+
+1.Remove your custom jQuery code from previous exercises.
+
+2.Update your code so that at least 3 different elements have the same class named codeup.
+
+3.Using jQuery, create a border around all elements with the class codeup that is 1 pixel wide and red.
+
+4.Remove the class from one of the elements. Refresh and test that the border has been removed.
+
+5.Give another element an id of codeup. Does this element get a border now?
+
+Element Selectors
+
+1.Remove your custom jQuery code from previous exercises.
+
+2.Using jQuery, set the font-size of all li elements to 20px.
+
+3.Craft selectors that highlight all the h1, p, and li elements.
+
+4.Create a jQuery statement to alert the contents of your h1 element(s).
+
+Multiple Selectors
+
+1.Combine your selectors that highlight all the h1, p, and li elements.-->
