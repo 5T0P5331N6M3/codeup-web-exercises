@@ -8,7 +8,8 @@
     <title>Konami Code</title>
     <style>
         * {
-            background-color: #6F9385FF;
+            background-color: darkred;
+            color: #14936c;
         }
     </style>
 </head>
@@ -51,6 +52,7 @@
 
         if (keyPressed === konamiCode[keyCount]) {
             keyCount++;
+            alert("You have added 30 lives!");
 
             if (keyCount === konamiCode.length) {
                 codeActivated();
@@ -69,19 +71,6 @@
     function resetKey() {
         keyCount = 0;
     }
-
-
-    //     // alert("You have added 30 lives!")
-    // } else {
-    //     // alert("You failed to gain lives.")
-    // }
-
-    //    TODO:Don't worry about capital a or b just check for lowercase.
-
-    //    TODO:After the correct Konami Code sequence is inputted, have the script alert the user: "You have added 30 lives! Other ideas:
-    //          Change the background screen.
-    //          Play a sound.
-    //          Be creative!
 </script>
 </body>
 </html>
