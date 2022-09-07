@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Konami Code</title>
+    <style>
+        * {
+            background-color: #6F9385FF;
+        }
+    </style>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous">
+</script>
+
+<script>
+    "use strict";
+
+    $(document).keyup(function (event) {
+        console.log(event.keyCode);
+    });
+
+    //    TODO:Allow the user to enter the Konami Code: "↑ ↑ ↓ ↓ ← → ← → b a enter" (the return key)
+
+    //    TODO:Find the matching sequence using the code above for each key in the Konami Code.
+    let keys = {
+        13: "enter",
+        37: "left",
+        38: "up",
+        39: "right",
+        40: "down",
+        65: "a",
+        66: "b"
+    }
+    let konamiCode = ["up", "up", "down", "down", "left", "right", "left", "right", "b", "a", "enter"];
+
+    let keyCount = 0;
+
+    document.addEventListener("keyup", checkCode, false);
+
+    function checkCode(event) {
+        console.log(event.keycode);
+
+        let keyPressed = keys[e.keyCode];
+
+        if (keyPressed === konamiCode[keyCount]) {
+            keyCount++;
+
+            if (keyCount === konamiCode.length) {
+                codeActivated();
+                resetKey();
+                // alert("You have added 30 lives!");
+            }
+        } else {
+            resetKey();
+        }
+    }
+
+    function codeActivated(){
+        alert("Konami Code Activated!");
+    }
+
+    function resetKey() {
+        keyCount = 0;
+    }
+
+
+    //     // alert("You have added 30 lives!")
+    // } else {
+    //     // alert("You failed to gain lives.")
+    // }
+
+    //    TODO:Don't worry about capital a or b just check for lowercase.
+
+    //    TODO:After the correct Konami Code sequence is inputted, have the script alert the user: "You have added 30 lives! Other ideas:
+    //          Change the background screen.
+    //          Play a sound.
+    //          Be creative!
+</script>
+</body>
+</html>
