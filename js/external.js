@@ -50,7 +50,7 @@ console.log(hercules);
 
 let currentDue = (littleMermaid * 3) + (brotherBear * 3) + (hercules * 3);
 
-alert("Your current total is $" + currentDue + ".")
+alert("Your current movie rental total is $" + currentDue + ".")
 
 
 
@@ -90,16 +90,16 @@ let facebookRate = 350;
 // console.log(earnedTotal);
 
 let googleHours = prompt("Total hours with Google this week: ");
-alert("You entered " + googleHours + ".");
+alert("You are owed " + (googleHours * googleRate ) + " from Google.");
 
 let amazonHours = prompt("Total hours with Amazon this week: ");
-alert("You entered " + amazonHours + ".");
+alert("You are owed " + (amazonHours * amazonRate) + " from Amazon.");
 
-let facebookHours = prompt("Total hours with Amazon this week: ")
-alert("You entered " + facebookHours + ".");
+let facebookHours = prompt("Total hours with Facebook this week: ")
+alert("You are owed " + (facebookHours * facebookRate) + " from Facebook.");
 
-let earnedTotal = (googleHours * googleRate) + (amazonHours * amazonRate) + (facebookHours * facebookRate);
-alert("Your earnings this week is $" + earnedTotal + ",  a meme amount.")
+let earnedTotal = ((googleHours * googleRate) + (amazonHours * amazonRate) + (facebookHours * facebookRate));
+alert("Total earnings this week: $" + earnedTotal + ",  a meme amount.")
 
 
 
