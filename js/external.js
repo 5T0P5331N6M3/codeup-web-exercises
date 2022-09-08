@@ -1,3 +1,6 @@
+//  1.
+
+
 // console.log("Hello from external JavaScript");
 // alert("Welcome to my Website!");
 // var userInput = prompt("What is your favorite color?");
@@ -20,17 +23,37 @@ like it). If price for a movie per day is $3,
 how much will you have to pay?
 */
 //Second attempt:
-let littleMermaid = 3;
-let brotherBear = 5;
-let hercules = 1;
-let price = 3
-let littleMermaidTotal = price * littleMermaid;
-let brotherBearTotal = price * brotherBear;
-let herculesTotal = price * hercules;
-let totalPrice = littleMermaidTotal + brotherBearTotal + herculesTotal;
-console.log(totalPrice);
-console.log("Your total due is $" + totalPrice + " .");
-alert("Your total due is $" + totalPrice + ".");
+// let littleMermaid = 3;
+// let brotherBear = 5;
+// let hercules = 1;
+// let price = 3
+// let littleMermaidTotal = price * littleMermaid;
+// let brotherBearTotal = price * brotherBear;
+// let herculesTotal = price * hercules;
+// let totalPrice = littleMermaidTotal + brotherBearTotal + herculesTotal;
+// console.log(totalPrice);
+// console.log("The user entered: " + userInput);
+// console.log("Your total due is $" + totalPrice + " .");
+// alert("Your total due is $" + totalPrice + ".");
+
+let littleMermaid = prompt("How many days did you rent Little Mermaid?");
+alert("You rented Little Mermaid for " + littleMermaid + " days.");
+console.log(littleMermaid);
+
+let brotherBear = prompt("How many days did you rent Brother Bear?");
+alert("You rented Little Mermaid for " + brotherBear + " days.");
+console.log(brotherBear);
+
+let hercules = prompt("How many days did you rent Hercules?");
+alert("You rented Little Mermaid for " + hercules + " days.");
+console.log(hercules);
+
+let currentDue = (littleMermaid * 3) + (brotherBear * 3) + (hercules * 3);
+
+alert("Your current total is $" + currentDue + ".")
+// let totalPrice = prompt("Your current total is $" + currentDue + ".");
+// console.log(totalPrice);
+
 
         // var LittleMermaid = prompt("How many days have you rented Little Mermaid?");
         // var BrotherBear = prompt("How many days have you Brother Bear?");
@@ -53,13 +76,20 @@ this week? You worked 10 hours for Facebook, 6 hours for Google and 4 hours
 for Amazon. */
 
 //Second attempt:
-//pay rate per hour
+//  pay rate per hour
 let googleRate = 400;
 let amazonRate = 380;
 let facebookRate = 350;
+//  hours worked
 let googleHours = 6;
 let amazonHours = 4;
 let facebookHours = 10;
+let googleTotal = googleRate * googleHours;
+let amazonTotal = amazonRate * amazonHours;
+let facebookTotal = facebookRate * facebookHours;
+let earnedTotal = googleTotal + amazonTotal + facebookTotal;
+console.log(earnedTotal);
+alert("Your earnings this week is $" + earnedTotal + ",  a meme amount.")
 
 
 
