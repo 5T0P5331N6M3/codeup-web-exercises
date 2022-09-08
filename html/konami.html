@@ -22,10 +22,10 @@
 
 <script>
     "use strict";
-
-    $(document).keyup(function (event) {
-        console.log(event.keyCode);
-    });
+    //Code below will show numerical key in console.
+    // $(document).keyup(function (event) {
+    //     console.log(event.keyCode);
+    // });
 
     //    TODO:Allow the user to enter the Konami Code: "↑ ↑ ↓ ↓ ← → ← → b a enter" (the return key)
 
@@ -43,21 +43,19 @@
 
     let keyCount = 0;
 
-    document.addEventListener("keyup", checkCode, false);
+    $(document).keyup(checkCode);
 
-    function checkCode(event) {
+    function checkCode(e) {
         console.log(event.keycode);
 
         let keyPressed = keys[e.keyCode];
 
         if (keyPressed === konamiCode[keyCount]) {
             keyCount++;
-            alert("You have added 30 lives!");
 
             if (keyCount === konamiCode.length) {
                 codeActivated();
                 resetKey();
-                // alert("You have added 30 lives!");
             }
         } else {
             resetKey();
