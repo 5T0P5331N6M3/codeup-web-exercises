@@ -7,6 +7,7 @@ console.log("Hello from external JavaScript");
 
 alert("Welcome to my Website!");
 
+// This one makes me feel better.
 let favColor = prompt("What is your favorite color?");
 alert("Great "+ favColor + " is my favorite color too!")
 
@@ -18,7 +19,18 @@ and Hercules (1 day, you don't know yet if they're going to
 like it). If price for a movie per day is $3,
 how much will you have to pay?
 */
-
+//Second attempt:
+let littleMermaid = 3;
+let brotherBear = 5;
+let hercules = 1;
+let price = 3
+let littleMermaidTotal = price * littleMermaid;
+let brotherBearTotal = price * brotherBear;
+let herculesTotal = price * hercules;
+let totalPrice = littleMermaidTotal + brotherBearTotal + herculesTotal;
+console.log(totalPrice);
+console.log("Your total due is $" + totalPrice + " .");
+alert("Your total due is $" + totalPrice + ".");
 
         // var LittleMermaid = prompt("How many days have you rented Little Mermaid?");
         // var BrotherBear = prompt("How many days have you Brother Bear?");
@@ -34,11 +46,22 @@ becasue the movies have not been returned (don't know yet if kids will
 like the movie Hercules). I tried showing a running tally. Grr. How? */
 
 
-/*Suppose you're working as a contractor for 3 companies: Google, Amazon
+/* Suppose you're working as a contractor for 3 companies: Google, Amazon
 and Facebook, they pay you a different rate per hour. Google pays $400,
 Amazon $380, and Facebook $350. How much will you receive in payment for
 this week? You worked 10 hours for Facebook, 6 hours for Google and 4 hours
 for Amazon. */
+
+//Second attempt:
+//pay rate per hour
+let googleRate = 400;
+let amazonRate = 380;
+let facebookRate = 350;
+let googleHours = 6;
+let amazonHours = 4;
+let facebookHours = 10;
+
+
 
 
         // var FB = 350;
