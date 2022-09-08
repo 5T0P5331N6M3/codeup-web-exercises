@@ -126,6 +126,24 @@ alert("Total earnings this week: $" + earnedTotal + ",  a meme amount.")
 and the class schedule does not conflict with her current schedule.
 */
 
+
+let courseAvailability = prompt("Is the class full, Yes or No?");
+alert("You selected " + courseAvailability + ".");
+
+let  courseSchedule = prompt("Does the class schedule conflict with student's current schedule, Yes or No?");
+alert("You selected " + courseSchedule + ".");
+
+// function conflict () {
+// Why do I not need function for the if statement?
+    if (courseAvailability === "No" || courseSchedule === "No") {
+        alert("Student can attend course.");
+    //    How do I alert
+    } else {
+        alert("Student cannot attend course.")
+    }
+// }
+
+
         // var isFull = confirm("Is the class full?");
         // var isConflict = confirm("Does the class schedule conflict with current schedule?")
         // var confirmConflict = !isFull && !isConflict;
