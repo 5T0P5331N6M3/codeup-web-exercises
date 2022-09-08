@@ -158,6 +158,8 @@ var isConflict = confirm("Does the class schedule conflict with current schedule
 var confirm = !isFull && !isConflict;
 alert("Approved");*/
 
+// TODO: Product Offer
+
 /* A product offer can be applied only if a person buys more than 2 items,
 and the offer has not expired. Premium members do not need to buy a
 specific amount of products.
