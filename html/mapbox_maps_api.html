@@ -8,14 +8,26 @@
     <title>Mapbox Maps API Exercise</title>
 </head>
 <body>
-    <div id="map">
-        mapboxgl.accessToken = '/../js/keys.js';
-        const map = new mapboxgl.Map({
+<h1>Favorite Restaurant in Philly</h1>
+
+<!-- The HTML element serving as the Mapbox container -->
+
+<div id="map"></div>
+
+<!-- Mapbox JS -->
+
+<script src="#"></script>
+
+<!-- Custom JS -->
+
+<script>
+    mapboxgl.accessToken = 'keys.js';
+    const map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11',
-        center: [-74.5, 40],
+        center: [-73.990593, 40.740121],
         zoom: 9
-        });
-    </div>
+    });
+</script>
 </body>
 </html>
