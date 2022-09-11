@@ -63,6 +63,11 @@
 
 <!-- Custom JS -->
 
+<!--
+
+TODO: Refactor your code to display at least three of your favorite restaurants with information about each. Create an array of objects with information about each restaurant to accomplish this. Use a .forEach() loop rather than a for loop.
+
+-->
 <script>
     mapboxgl.accessToken = "keys.js";
     const map = new mapboxgl.Map({
@@ -76,6 +81,7 @@
 
     const popup = new mapboxgl.Popup({ offset:
     25 }).setText("Sabrina\'s Cafe")
+    //TODO: Add some additional information about your restaurant to the popup such as why it is your favorite, dishes you like, images, etc.
 
     // Create a default Marker and add it to the map.
 
