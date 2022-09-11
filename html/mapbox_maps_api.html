@@ -8,7 +8,7 @@
     <title>Mapbox Maps API Exercise</title>
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet'/>
 
     <!-- Mapbox CSS -->
     <link rel="stylesheet" href="../css/mapbox_maps_api.css">
@@ -23,7 +23,8 @@
 
 <div id="map"></div>
 
-<h2>On <a class="sabrina-link" href="https://www.sabrinascafe.com/" target="_blank" rel="noopener noreferrer">South Street</a> in Philly</h2>
+<h2>On <a class="sabrina-link" href="https://www.sabrinascafe.com/" target="_blank" rel="noopener noreferrer">South
+    Street</a> in Philly</h2>
 
 <!-- Mapbox JS -->
 
@@ -40,6 +41,7 @@
 TODO: Refactor your code to display at least three of your favorite restaurants with information about each. Create an array of objects with information about each restaurant to accomplish this. Use a .forEach() loop rather than a for loop.
 
 -->
+
 <script>
     mapboxgl.accessToken = "keys.js";
     const map = new mapboxgl.Map({
@@ -49,27 +51,30 @@ TODO: Refactor your code to display at least three of your favorite restaurants 
         zoom: 12
     });
 
-    map.on("styule.load", () => {
+    map.on("style.load", () => {
         map.setFog({});
     });
     // Create Popup.
 
-    const popup = new mapboxgl.Popup({ offset:
-    25 }).setText("Sabrina\'s Cafe")
+    const popup = new mapboxgl.Popup({
+        offset:
+            25
+    }).setText("Sabrina\'s Cafe")
     //TODO: Add some additional information about your restaurant to the popup such as why it is your favorite, dishes you like, images, etc.
 
     // Create a default Marker and add it to the map.
 
     const marker1 = new mapboxgl.Marker()
-        setLngLat([-73.990593, 40.740121])
-        addTo(map);
+    setLngLat([-73.990593, 40.740121])
+    addTo(map);
 
     // Create a default Marker, colored black, rotated 45 degrees.
 
     const marker2 = new mapboxgl.Marker({
-        color: "black", rotation: 45 })
-            .setLngLat( [-73.990593, 40.740121] )
-            .addTo(map);
+        color: "black", rotation: 45
+    })
+        .setLngLat([-73.990593, 40.740121])
+        .addTo(map);
 
     // The geocode method from mapbox-geocoder-utils.js
 
@@ -79,10 +84,10 @@ TODO: Refactor your code to display at least three of your favorite restaurants 
         map.setZoom(20);
     });
 
-//    From MapBox Troubleshooting: Code Showing the map div
-//     $("#map-div").show();
-// //    Troubleshoot: Detect map's new width and height and resize it
-//     map.resize();
+    //    From MapBox Troubleshooting: Code Showing the map div
+    //     $("#map-div").show();
+    // //    Troubleshoot: Detect map's new width and height and resize it
+    //     map.resize();
 </script>
 </body>
 </html>
