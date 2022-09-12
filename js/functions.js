@@ -35,6 +35,8 @@ console.log(sayHello("Codeup" + "!"));
 
 /*Re-Try*/
 
+let helloMessage = sayHello("Cas");
+console.log(helloMessage);
 
 /**
  * TODO:
