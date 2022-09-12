@@ -11,7 +11,7 @@ Bonus: when the marker is dragged and released, display the coordinates in an h1
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mapbox 1</title>
+    <title>Mapbox 2</title>
     <!-- Mapbox CSS -->
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet'/>
     <!-- Custom CSS -->
@@ -44,23 +44,32 @@ Bonus: when the marker is dragged and released, display the coordinates in an h1
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v9',
-        zoom: 10,
+        zoom: 12,
         center: [-77.0369, 38.9072]
     });
 
-    const marker = new mapboxgl.Marker({
-        draggable: true
-    })
+    const popup = new mapboxgl.Popup()
         .setLngLat([-77.0502, 38.8893])
+        .setMaxWidth("300px")
+        .setHTML("<h2>Lincoln Memorial</h2>")
         .addTo(map);
 
-    const popup = new mapboxgl.Popup({marker})
+    const marker = new mapboxgl.Marker({draggable: true})
         .setLngLat([-77.0502, 38.8893])
-        .setMaxWidth("100px")
-        .setHTML("<h4>Corruption!</h4>")
+        .setPopup(popup)
         .addTo(map);
+
+
 
     //  Bonus: when the marker is dragged and released, display the coordinates in an h1
+
+    marker.on("dragend", function() {
+        let coordinates = marker.getLngLat();
+        console.log(coordinates);
+        console.log(coordinates.lat);
+        console.log(coordinates.lng);
+        $("h1").html("Latitude: " + coordinates.lat + "<br> Longitude: " + coordinates.lng)
+    })
 
     // function onDragEnd() {
     //

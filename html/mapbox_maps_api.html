@@ -59,27 +59,29 @@ TODO: Refactor your code to display at least three of your favorite restaurants 
     const map = new mapboxgl.Map({
         container: "map",
         style: "mapbox://styles/mapbox/streets-v11",
-        center: [-73.990593, 40.740121],
-        zoom: 19
+        center: [-75.177470, 39.945311],
+        zoom: 12
     });
 
-    console.log(map.getCenter());
-    map.setZoom(9);
-    map.setCenter([-73.990593, 40.740121]);
+    // Create a default Marker and add it to the map.
 
-    // map.on("style.load", () => {
-    //     map.setFog({});
-    // });
-    // // Create Popup.
-    //
-    // const popup = new mapboxgl.Popup({
-    //     offset:
-    //         25
-    // }).setText("Sabrina\'s Cafe")
-    //
+    const popup = new mapboxgl.Popup()
+        .setLngLat([-75.177470, 39.945311])
+        .setMaxWidth("300px")
+        .setHTML("<h3>Sabrina's Cafe on South Street</h3>")
+        .addTo(map);
+
+    const marker = new mapboxgl.Marker()
+        .setLngLat([-75.177470, 39.945311])
+        .setPopup(popup)
+        .addTo(map);
+
+    // Create Popup.
+
+
     // //TODO: Add some additional information about your restaurant to the popup such as why it is your favorite, dishes you like, images, etc.
     //
-    // // Create a default Marker and add it to the map.
+    //
     //
     // const marker1 = new mapboxgl.Marker()
     // setLngLat([-73.990593, 40.740121])
