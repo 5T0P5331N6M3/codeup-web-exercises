@@ -37,9 +37,7 @@
     Street</a> in Philly</h2>
 
 <!-- Mapbox JS -->
-
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
-
 <script src="../js/keys.js"></script>
 
 <!-- Mapbox Geocoder Util Methods-->
@@ -53,60 +51,37 @@
 TODO: Refactor your code to display at least three of your favorite restaurants with information about each. Create an array of objects with information about each restaurant to accomplish this. Use a .forEach() loop rather than a for loop.
 
 -->
-
+<!--Add Restaurants: Moshulu, Fogo de Chao Brazillian Steakhouse, Pat's King of Steaks, Geno's Steaks-->
 <script>
     mapboxgl.accessToken = MAPBOX_TOKEN;
     const map = new mapboxgl.Map({
         container: "map",
-        style: "mapbox://styles/mapbox/streets-v11",
+        style: "mapbox://styles/mapbox/satellite-streets-v11",
         center: [-75.177470, 39.945311],
-        zoom: 12
+        zoom: 18
     });
 
-    // Create a default Marker and add it to the map.
-
+    // Create Popup.
     const popup = new mapboxgl.Popup()
         .setLngLat([-75.177470, 39.945311])
         .setMaxWidth("300px")
         .setHTML("<h3>Sabrina's Cafe on South Street</h3>")
         .addTo(map);
 
-    const marker = new mapboxgl.Marker()
+    // Create a default Marker and add it to the map.
+    const marker = new mapboxgl.Marker({draggable: true})
         .setLngLat([-75.177470, 39.945311])
         .setPopup(popup)
         .addTo(map);
 
-    // Create Popup.
+
 
 
     // //TODO: Add some additional information about your restaurant to the popup such as why it is your favorite, dishes you like, images, etc.
-    //
-    //
-    //
-    // const marker1 = new mapboxgl.Marker()
-    // setLngLat([-73.990593, 40.740121])
-    // addTo(map);
-    //
-    // // Create a default Marker, colored black, rotated 45 degrees.
-    //
-    // const marker2 = new mapboxgl.Marker({
-    //     color: "black", rotation: 45
-    // })
-    //     .setLngLat([-73.990593, 40.740121])
-    //     .addTo(map);
-    //
-    // // The geocode method from mapbox-geocoder-utils.js
-    //
-    // geocode("2101 South St, Philadelphia, Pa 19146", "MAPBOX_TOKEN").then(function (result) {
-    //     console.log(result);
-    //     map.setCenter(result);
-    //     map.setZoom(20);
-    // });
 
-    //    From MapBox Troubleshooting: Code Showing the map div
-    //     $("#map-div").show();
-    // //    Troubleshoot: Detect map's new width and height and resize it
-    //     map.resize();
+    // // Create a default Marker, colored black, rotated 45 degrees.
+
+
 </script>
 </body>
 </html>
