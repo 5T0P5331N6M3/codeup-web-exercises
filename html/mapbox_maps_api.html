@@ -81,29 +81,16 @@ TODO: Refactor your code to display at least three of your favorite restaurants 
         container: "map",
         style: "mapbox://styles/mapbox/satellite-streets-v11",
         center: [-75.177470, 39.945311],
-        zoom: 10
+        zoom: 12.5
     });
-
-    // Create Popup.
-    const popup = new mapboxgl.Popup()
-        .setLngLat([-75.177470, 39.945311])
-        .setMaxWidth("300px")
-        .setHTML("<h3>Sabrina's Cafe on South Street</h3>")
-        .addTo(map);
-
-    // Create a default Marker and add it to the map.
-    const marker = new mapboxgl.Marker({draggable: true})
-        .setLngLat([-75.177470, 39.945311])
-        .setPopup(popup)
-        .addTo(map);
-
+    
     <!--Add Restaurants: Moshulu, Fogo de Chao Brazillian Steakhouse, Pat's King of Steaks, Geno's Steaks-->
     let restaurants = [
         {
             name: "Moshulu",
             address: "401 S Christopher Columbus Blvd, ON A BOAT",
             dish: "Prime Burger, 10oz w/ Cheese and Louie Sauce",
-            image: "",
+            website: "",
             coordinates: [-75.141249, 39.941598],
         },
 
@@ -111,7 +98,7 @@ TODO: Refactor your code to display at least three of your favorite restaurants 
             name: "Fogo de Chao Brazillian Steakhouse",
             address: "1337 Chestnut St",
             dish: "Pao De Queijo, a Brazilian yuca cheese bread",
-            image: "",
+            website: "",
             coordinates: [-75.162967, 39.950916],
         },
 
@@ -119,7 +106,7 @@ TODO: Refactor your code to display at least three of your favorite restaurants 
             name: "Pat's King of Steaks",
             address: "1237 E Passyunk Ave",
             dish: "Cheesesteak wit whiz, duh",
-            image: "",
+            website: "",
             coordinates: [-75.159235, 39.933191]
         },
 
@@ -127,8 +114,15 @@ TODO: Refactor your code to display at least three of your favorite restaurants 
             name: "Geno's Steaks",
             address: "1219 S 9th St",
             dish: "Cheesesteak wit whiz, two",
-            image: "",
+            website: "",
             coordinates: [-75.158839, 39.933824]
+        },
+        {
+            name: "Sabrina's Cafe",
+            address: "2101 South St",
+            dish: "Stuffed Challah French Toast",
+            website: "https://www.sabrinascafe.com",
+            coordinates: [-75.177470, 39.945311]
         },
     ]
 
@@ -138,27 +132,36 @@ TODO: Refactor your code to display at least three of your favorite restaurants 
         return restArray;
     });
 
+    const popup = new mapboxgl.Popup()
+        .setLngLat([-75.177470, 39.945311])
+        .setMaxWidth("300px")
+        .setHTML(restaurants[4].name + "<br>" + restaurants[4].address + "<br>" + restaurants[4].dish)
+        .addTo(map);
     const popup1 = new mapboxgl.Popup()
         .setLngLat([-75.177470, 39.945311])
         .setMaxWidth("300px")
-        .setHTML("<h3>Sabrina's Cafe on South Street</h3>")
+        .setHTML(restaurants[0].name + "<br>" + restaurants[0].address + "<br>" + restaurants[0].dish)
         .addTo(map);
     const popup2 = new mapboxgl.Popup()
         .setLngLat([-75.177470, 39.945311])
         .setMaxWidth("300px")
-        .setHTML("<h3>Sabrina's Cafe on South Street</h3>")
+        .setHTML(restaurants[1].name + "<br>" + restaurants[1].address + "<br>" + restaurants[1].dish)
         .addTo(map);
     const popup3 = new mapboxgl.Popup()
         .setLngLat([-75.177470, 39.945311])
         .setMaxWidth("300px")
-        .setHTML("<h3>Sabrina's Cafe on South Street</h3>")
+        .setHTML(restaurants[2].name + "<br>" + restaurants[2].address + "<br>" + restaurants[2].dish)
         .addTo(map);
     const popup4 = new mapboxgl.Popup()
         .setLngLat([-75.177470, 39.945311])
         .setMaxWidth("300px")
-        .setHTML(restaurants[0].name)
+        .setHTML(restaurants[3].name + "<br>" + restaurants[3].address + "<br>" + restaurants[3].dish + "<br>" + restaurants[3].website)
         .addTo(map);
 
+    const marker = new mapboxgl.Marker({draggable: true})
+        .setLngLat([-75.177470, 39.945311])
+        .setPopup(popup)
+        .addTo(map);
     const marker1 = new mapboxgl.Marker({draggable: true})
         .setLngLat(restaurants[0].coordinates)
         .setPopup(popup1)
@@ -176,9 +179,7 @@ TODO: Refactor your code to display at least three of your favorite restaurants 
         .setPopup(popup4)
         .addTo(map);
 
-    //TODO: Add some additional information about your restaurant to the popup such as why it is your favorite, dishes you like, images, etc.
-
-    // // Create a default Marker, colored black, rotated 45 degrees.
+    //TODO: Add some additional information about your restaurant to the popup such as why it is your favorite, dishes you like, websites, etc.
 
 
 </script>
