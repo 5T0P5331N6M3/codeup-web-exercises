@@ -110,7 +110,15 @@ console.log(isTwo(random));
 // console.log(calculateTip(0.20, 20));
 
 /*Re-Try*/
-
+//  Create function/name
+//  Need variable for tip percentage and total of the bill
+//  Return amount to tip. Does this mean return a prompt?
+//  Example has % * total bill, returning tip amount; ergo, need variables.
+function calculateTip(tipPercentage, totalBill) {
+    let tip = prompt("What percentage would you like to tip?");
+    let tipPercentage = tip *
+    return tipPercentage * totalBill;
+}
 
 /**
  * TODO:
