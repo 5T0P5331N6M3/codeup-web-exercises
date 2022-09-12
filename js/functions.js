@@ -51,6 +51,13 @@ console.log(helloMessage);
 // // and stores it in a variable named random
 // var random = Math.floor((Math.random() * 3) + 1);
 
+/*Re-Try*/
+
+//my name as a string? Pass my name to sayHello. I should see what same output?
+let myName = "Cas"
+sayHello(myName);
+console.log(sayHello(myName));
+
 /**
  * TODO:
  * Create a function called 'isTwo' that takes a number as a parameter.
@@ -73,6 +80,13 @@ console.log(helloMessage);
 // }
 // isTwo(3);
 
+/*Re-Try*/
+var random = Math.floor((Math.random() * 3) + 1);
+function isTwo(num) {
+    return num === 2;
+}
+isTwo(random);
+console.log(isTwo(random));
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -95,6 +109,9 @@ console.log(helloMessage);
 // }
 // console.log(calculateTip(0.20, 20));
 
+/*Re-Try*/
+
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
@@ -108,6 +125,10 @@ var userInput = prompt('Tip Amount (%): ');*/
 // var userBill = prompt("Bill Total?");
 // var userTipResult = calculateTip(userTip, userBill);
 // alert("Your tip should be " + userTipResult);
+
+/*Re-Try*/
+
+
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
@@ -128,3 +149,5 @@ var userInput = prompt('Tip Amount (%): ');*/
 //     return console.log(price - (price * discount));//console log checking algo//
 // }
 // applyDiscount(45.99, 0.12);
+
+/*Re-Try*/
