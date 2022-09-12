@@ -7,10 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mapbox Maps API Exercise</title>
 
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+    <!-- Mapbox CSS -->
+
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet'/>
 
-    <!-- Mapbox CSS -->
+<!--    Custom CSS for map -->
+    <style>
+        #map {
+            width: 98.5%;
+            height: 500px;
+            border: .5em solid #e7c1ce;
+        }
+    </style>
+
+
     <link rel="stylesheet" href="../css/mapbox_maps_api.css">
 
 </head>
@@ -28,12 +38,13 @@
 
 <!-- Mapbox JS -->
 
-<!--<script src="#"></script>-->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+
+<script src="../js/keys.js"></script>
 
 <!-- Mapbox Geocoder Util Methods-->
 
 <script src="../js/mapbox-geocoder-utils.js"></script>
-<script src="../js/keys.js"></script>
 
 <!-- Custom JS -->
 
@@ -52,38 +63,43 @@ TODO: Refactor your code to display at least three of your favorite restaurants 
         zoom: 19
     });
 
-    map.on("style.load", () => {
-        map.setFog({});
-    });
-    // Create Popup.
+    console.log(map.getCenter());
+    map.setZoom(9);
+    map.setCenter([-73.990593, 40.740121]);
 
-    const popup = new mapboxgl.Popup({
-        offset:
-            25
-    }).setText("Sabrina\'s Cafe")
-    //TODO: Add some additional information about your restaurant to the popup such as why it is your favorite, dishes you like, images, etc.
-
-    // Create a default Marker and add it to the map.
-
-    const marker1 = new mapboxgl.Marker()
-    setLngLat([-73.990593, 40.740121])
-    addTo(map);
-
-    // Create a default Marker, colored black, rotated 45 degrees.
-
-    const marker2 = new mapboxgl.Marker({
-        color: "black", rotation: 45
-    })
-        .setLngLat([-73.990593, 40.740121])
-        .addTo(map);
-
-    // The geocode method from mapbox-geocoder-utils.js
-
-    geocode("2101 South St, Philadelphia, Pa 19146", "MAPBOX_TOKEN").then(function (result) {
-        console.log(result);
-        map.setCenter(result);
-        map.setZoom(20);
-    });
+    // map.on("style.load", () => {
+    //     map.setFog({});
+    // });
+    // // Create Popup.
+    //
+    // const popup = new mapboxgl.Popup({
+    //     offset:
+    //         25
+    // }).setText("Sabrina\'s Cafe")
+    //
+    // //TODO: Add some additional information about your restaurant to the popup such as why it is your favorite, dishes you like, images, etc.
+    //
+    // // Create a default Marker and add it to the map.
+    //
+    // const marker1 = new mapboxgl.Marker()
+    // setLngLat([-73.990593, 40.740121])
+    // addTo(map);
+    //
+    // // Create a default Marker, colored black, rotated 45 degrees.
+    //
+    // const marker2 = new mapboxgl.Marker({
+    //     color: "black", rotation: 45
+    // })
+    //     .setLngLat([-73.990593, 40.740121])
+    //     .addTo(map);
+    //
+    // // The geocode method from mapbox-geocoder-utils.js
+    //
+    // geocode("2101 South St, Philadelphia, Pa 19146", "MAPBOX_TOKEN").then(function (result) {
+    //     console.log(result);
+    //     map.setCenter(result);
+    //     map.setZoom(20);
+    // });
 
     //    From MapBox Troubleshooting: Code Showing the map div
     //     $("#map-div").show();

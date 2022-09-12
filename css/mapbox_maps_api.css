@@ -1,18 +1,18 @@
-body {
-    margin: 0;
-    padding: 0;
-}
+/*body {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
 
-* {
-    background-color: #e7c1ce;
-}
+/** {*/
+/*    background-color: #e7c1ce;*/
+/*}*/
 
-#map {
-    /* the width and height of map*/
-    width: 99%;
-    height: 500px;
-    border: .5em solid black;
-}
+/*#map {*/
+/*    !* the width and height of map*!*/
+/*    width: 99%;*/
+/*    height: 500px;*/
+/*    border: .5em solid black;*/
+/*}*/
 
 h1, h2 {
     text-align: center;
