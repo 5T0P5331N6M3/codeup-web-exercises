@@ -33,6 +33,7 @@
 <!-- Mapbox Geocoder Util Methods-->
 
 <script src="../js/mapbox-geocoder-utils.js"></script>
+<script src="../js/keys.js"></script>
 
 <!-- Custom JS -->
 
@@ -43,7 +44,7 @@ TODO: Refactor your code to display at least three of your favorite restaurants 
 -->
 
 <script>
-    mapboxgl.accessToken = "keys.js";
+    mapboxgl.accessToken = MAPBOX_TOKEN;
     const map = new mapboxgl.Map({
         container: "map",
         style: "mapbox://styles/mapbox/streets-v11",
