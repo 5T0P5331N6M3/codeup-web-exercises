@@ -11,12 +11,21 @@
 
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet'/>
 
-<!--    Custom CSS for map -->
+    <!--    Custom CSS for map -->
     <style>
         #map {
             width: 98.5%;
             height: 500px;
             border: .5em solid #e7c1ce;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            color: #e7c1ce;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
         }
     </style>
 
@@ -25,16 +34,27 @@
 
 </head>
 <body>
-<h1>Sabrina's Cafe</h1>
+<!--<h1>Sabrina's Cafe</h1>-->
 
-<p>Their Stuffed Challah French Toast . . . fuggedaboutit.</p>
+<!--<p>Their Stuffed Challah French Toast . . . fuggedaboutit.</p>-->
 
-<!-- The HTML element serving as the Mapbox container -->
+<!--<main>-->
+<!--    <section>-->
+<!--        &lt;!&ndash; The HTML element serving as the Mapbox container &ndash;&gt;-->
+<!--        -->
+<!--    </section>-->
+<!--</main>-->
+<main class="sidebar">
+    <div class="heading">
+        <h1>Good Eats in Philly</h1>
+    </div>
+    <div id="listings" class="listings"></div>
+    <div id="map" class="map"></div>
+</main>
 
-<div id="map"></div>
 
-<h2>On <a class="sabrina-link" href="https://www.sabrinascafe.com/" target="_blank" rel="noopener noreferrer">South
-    Street</a> in Philly</h2>
+<!--<h2>On <a class="sabrina-link" href="https://www.sabrinascafe.com/" target="_blank" rel="noopener noreferrer">South-->
+<!--    Street</a> in Philly</h2>-->
 
 <!-- Mapbox JS -->
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
@@ -51,7 +71,7 @@
 TODO: Refactor your code to display at least three of your favorite restaurants with information about each. Create an array of objects with information about each restaurant to accomplish this. Use a .forEach() loop rather than a for loop.
 
 -->
-<!--Add Restaurants: Moshulu, Fogo de Chao Brazillian Steakhouse, Pat's King of Steaks, Geno's Steaks-->
+
 <script>
     mapboxgl.accessToken = MAPBOX_TOKEN;
     const map = new mapboxgl.Map({
@@ -74,7 +94,36 @@ TODO: Refactor your code to display at least three of your favorite restaurants 
         .setPopup(popup)
         .addTo(map);
 
+    <!--Add Restaurants: Moshulu, Fogo de Chao Brazillian Steakhouse, Pat's King of Steaks, Geno's Steaks-->
+    let restaurants = [
+        {
+            name: "Moshulu",
+            address: "401 S Christopher Columbus Blvd, ON A BOAT",
+            dish: "Prime Burger, 10oz w/ Cheese and Louie Sauce",
+            image: "",
+        },
 
+        {
+            name: "Fogo de Chao Brazillian Steakhouse",
+            address: "1337 Chestnut St",
+            dish: "Pao De Queijo, a Brazilian yuca cheese bread",
+            image: "",
+        },
+
+        {
+            name: "Pat's King of Steaks",
+            address: "1237 E Passyunk Ave",
+            dish: "Cheesesteak wit whiz, duh",
+            image: "",
+        },
+
+        {
+            name: "Geno's Steaks",
+            address: "1219 S 9th St",
+            dish: "Cheesesteak wit whiz, two",
+            image: "",
+        },
+    ]
 
 
     // //TODO: Add some additional information about your restaurant to the popup such as why it is your favorite, dishes you like, images, etc.
