@@ -48,7 +48,16 @@ Bonus: when the marker is dragged and released, display the coordinates in an h1
         center: [-77.0369, 38.9072]
     });
 
-    <!--Add a popup to the Lincoln Memorial marker that contains the text "Lincoln Memorial"-->
+
+    const marker = new mapboxgl.Marker()
+        .setLngLat([-77.0502, 38.8893])
+        .addTo(map);
+
+    const popup = new mapboxgl.Popup({marker})
+        .setLngLat([-77.0502, 38.8893])
+        .setMaxWidth("100px")
+        .setHTML("<h4>Corruption!</h4>")
+        .addTo(map);
 
 </script>
 </body>
