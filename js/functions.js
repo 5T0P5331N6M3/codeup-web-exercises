@@ -8,12 +8,20 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
-function sayHello(name) {
-    //return "Hello, Haskell!";
-    return "Hello ," + name + " !";
-}
-sayHello('Haskell');
+// function sayHello(name) {
+//     //return "Hello, Haskell!";
+//     return "Hello, " + name + "!";
+// }
+// sayHello('Haskell');
+// console.log(sayHello("Haskell"));
 
+/*Re-Try*/
+
+function sayHello(name) {
+    return "Hello, " + name;
+}
+// sayHello("Codeup");
+console.log(sayHello("Codeup" + "!"));
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -22,8 +30,11 @@ sayHello('Haskell');
  * console.log 'helloMessage' to check your work
  */
 
-var helloMessage = sayHello("Casanova"); //string literal argument//
-//console.log('helloMessage');
+// var helloMessage = sayHello("Casanova"); //string literal argument//
+// //console.log('helloMessage');
+
+/*Re-Try*/
+
 
 /**
  * TODO:
@@ -31,12 +42,12 @@ var helloMessage = sayHello("Casanova"); //string literal argument//
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
-var myName = "Casanova";
-sayHello(myName); // "pass variable" means place into parameter ().//
-console.log(sayHello(myName));
-// Don't modify the following line, it generates a random number between 1 and 3
-// and stores it in a variable named random
-var random = Math.floor((Math.random() * 3) + 1);
+// var myName = "Casanova";
+// sayHello(myName); // "pass variable" means place into parameter ().//
+// console.log(sayHello(myName));
+// // Don't modify the following line, it generates a random number between 1 and 3
+// // and stores it in a variable named random
+// var random = Math.floor((Math.random() * 3) + 1);
 
 /**
  * TODO:
@@ -55,10 +66,10 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-function isTwo(x) {
-    return x === 2
-}
-isTwo(3);
+// function isTwo(x) {
+//     return x === 2
+// }
+// isTwo(3);
 
 /**
  * TODO:
@@ -77,10 +88,10 @@ isTwo(3);
     var tipPercentage = x * calculateTip();
     var totalBill = tipPercentage + calculateTip();
     return*/
-function calculateTip(tipPercent, totalBill) {
-    return (tipPercent * totalBill);
-}
-console.log(calculateTip(0.20, 20));
+// function calculateTip(tipPercent, totalBill) {
+//     return (tipPercent * totalBill);
+// }
+// console.log(calculateTip(0.20, 20));
 
 /**
  * TODO:
@@ -91,10 +102,10 @@ console.log(calculateTip(0.20, 20));
 /*var userInput = prompt('Bill Total: ');
 var userInput = prompt('Tip Amount (%): ');*/
 //alert(calculateTip("Tip Percentage?" + calculateTip(prompt("How much would you like to tip?"))), ("Bill Total"));
-var userTip = prompt("Tip amount?");
-var userBill = prompt("Bill Total?");
-var userTipResult = calculateTip(userTip, userBill);
-alert("Your tip should be " + userTipResult);
+// var userTip = prompt("Tip amount?");
+// var userBill = prompt("Bill Total?");
+// var userTipResult = calculateTip(userTip, userBill);
+// alert("Your tip should be " + userTipResult);
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
@@ -109,9 +120,9 @@ alert("Your tip should be " + userTipResult);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
-function applyDiscount(price, discount) {
-    //var originalPrice
-    //var discountPercentage
-    return console.log(price - (price * discount));//console log checking algo//
-}
-applyDiscount(45.99, 0.12);
+// function applyDiscount(price, discount) {
+//     //var originalPrice
+//     //var discountPercentage
+//     return console.log(price - (price * discount));//console log checking algo//
+// }
+// applyDiscount(45.99, 0.12);
