@@ -16,13 +16,15 @@
         #map {
             width: 98.5%;
             height: 500px;
-            border: .5em solid #e7c1ce;
+            /*border: .5em solid #3E8C5D;*/
         }
+
         * {
             box-sizing: border-box;
         }
+
         body {
-            color: #e7c1ce;
+            color: #3E8C5D;
             margin: 0;
             padding: 0;
             -webkit-font-smoothing: antialiased;
@@ -49,8 +51,8 @@
         <h1>Good Eats in Philly</h1>
     </div>
     <div id="listings" class="listings"></div>
-    <div id="map" class="map"></div>
 </main>
+<div id="map" class="map"></div>
 
 
 <!--<h2>On <a class="sabrina-link" href="https://www.sabrinascafe.com/" target="_blank" rel="noopener noreferrer">South-->
@@ -72,13 +74,14 @@ TODO: Refactor your code to display at least three of your favorite restaurants 
 
 -->
 
+</body>
 <script>
     mapboxgl.accessToken = MAPBOX_TOKEN;
     const map = new mapboxgl.Map({
         container: "map",
         style: "mapbox://styles/mapbox/satellite-streets-v11",
         center: [-75.177470, 39.945311],
-        zoom: 18
+        zoom: 10
     });
 
     // Create Popup.
@@ -101,6 +104,7 @@ TODO: Refactor your code to display at least three of your favorite restaurants 
             address: "401 S Christopher Columbus Blvd, ON A BOAT",
             dish: "Prime Burger, 10oz w/ Cheese and Louie Sauce",
             image: "",
+            coordinates: [-75.141249, 39.941598],
         },
 
         {
@@ -108,6 +112,7 @@ TODO: Refactor your code to display at least three of your favorite restaurants 
             address: "1337 Chestnut St",
             dish: "Pao De Queijo, a Brazilian yuca cheese bread",
             image: "",
+            coordinates: [-75.162967, 39.950916],
         },
 
         {
@@ -115,6 +120,7 @@ TODO: Refactor your code to display at least three of your favorite restaurants 
             address: "1237 E Passyunk Ave",
             dish: "Cheesesteak wit whiz, duh",
             image: "",
+            coordinates: [-75.159235, 39.933191]
         },
 
         {
@@ -122,15 +128,58 @@ TODO: Refactor your code to display at least three of your favorite restaurants 
             address: "1219 S 9th St",
             dish: "Cheesesteak wit whiz, two",
             image: "",
+            coordinates: [-75.158839, 39.933824]
         },
     ]
 
+    restaurants.forEach(function (element) {
+        let restArray = [element];
+        console.log(restArray);
+        return restArray;
+    });
 
-    // //TODO: Add some additional information about your restaurant to the popup such as why it is your favorite, dishes you like, images, etc.
+    const popup1 = new mapboxgl.Popup()
+        .setLngLat([-75.177470, 39.945311])
+        .setMaxWidth("300px")
+        .setHTML("<h3>Sabrina's Cafe on South Street</h3>")
+        .addTo(map);
+    const popup2 = new mapboxgl.Popup()
+        .setLngLat([-75.177470, 39.945311])
+        .setMaxWidth("300px")
+        .setHTML("<h3>Sabrina's Cafe on South Street</h3>")
+        .addTo(map);
+    const popup3 = new mapboxgl.Popup()
+        .setLngLat([-75.177470, 39.945311])
+        .setMaxWidth("300px")
+        .setHTML("<h3>Sabrina's Cafe on South Street</h3>")
+        .addTo(map);
+    const popup4 = new mapboxgl.Popup()
+        .setLngLat([-75.177470, 39.945311])
+        .setMaxWidth("300px")
+        .setHTML(restaurants[0].name)
+        .addTo(map);
+
+    const marker1 = new mapboxgl.Marker({draggable: true})
+        .setLngLat(restaurants[0].coordinates)
+        .setPopup(popup1)
+        .addTo(map);
+    const marker2 = new mapboxgl.Marker({draggable: true})
+        .setLngLat(restaurants[1].coordinates)
+        .setPopup(popup2)
+        .addTo(map);
+    const marker3 = new mapboxgl.Marker({draggable: true})
+        .setLngLat(restaurants[2].coordinates)
+        .setPopup(popup3)
+        .addTo(map);
+    const marker4 = new mapboxgl.Marker({draggable: true})
+        .setLngLat(restaurants[3].coordinates)
+        .setPopup(popup4)
+        .addTo(map);
+
+    //TODO: Add some additional information about your restaurant to the popup such as why it is your favorite, dishes you like, images, etc.
 
     // // Create a default Marker, colored black, rotated 45 degrees.
 
 
 </script>
-</body>
 </html>
