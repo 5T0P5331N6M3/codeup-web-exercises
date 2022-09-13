@@ -23,25 +23,109 @@
     </style>
 </head>
 <body>
-<header>
-    <h2 class="heading">Weather, Not App</h2><p class="current-city">Current City: </p>
+<header class="heading">
+    <h2>Weather, Not App</h2>
+    <p class="current-city">Current City: </p>
 </header>
-<section class="top-header">
-    <div class="container">
-        <form action="">
-            <input type="text" class="" placeholder="City, State or Zipcode">
-            <label for=""></label>
-            <button class="btn" type="submit">Find</button>
-        </form>
-    </div>
+<main id="main-container">
+    <section class="top-header">
+        <div class="container">
+            <form action="" id="form-container">
+                <label for="btn-search">Place</label>
+                <input type="text" id="btn-search" placeholder="City, State">
+                <button class="btn" type="submit">Find</button>
+            </form>
+        </div>
+    </section>
+    <article id="cards" class="cards">
+        <section class="days">
+            <header class="day1">
+                <h4 class="day-date"></h4>
+            </header>
+            <div class="">
+                <p>Temp Example</p>
+                <img src="" alt="">
+                <hr>
+                <p>Description: </p>
+                <p>Humidity: </p>
+                <hr>
+                <p>Wind: </p>
+                <hr>
+                <p>Pressure: </p>
+            </div>
+        </section>
+        <section class="days">
+            <header class="day2">
+                <h4 class="day-date"></h4>
+            </header>
+            <div class="">
+                <p>Temp Example</p>
+                <img src="" alt="">
+                <hr>
+                <p>Description: </p>
+                <p>Humidity: </p>
+                <hr>
+                <p>Wind: </p>
+                <hr>
+                <p>Pressure: </p>
+            </div>
+        </section>
+        <section class="days">
+            <header class="day3">
+                <h4 class="day-date"></h4>
+            </header>
+            <div class="">
+                <p>Temp Example</p>
+                <img src="" alt="">
+                <hr>
+                <p>Description: </p>
+                <p>Humidity: </p>
+                <hr>
+                <p>Wind: </p>
+                <hr>
+                <p>Pressure: </p>
+            </div>
+        </section>
+        <section class="days">
+            <header class="day4">
+                <h4 class="day-date"></h4>
+            </header>
+            <div class="">
+                <p>Temp Example</p>
+                <img src="" alt="">
+                <hr>
+                <p>Description: </p>
+                <p>Humidity: </p>
+                <hr>
+                <p>Wind: </p>
+                <hr>
+                <p>Pressure: </p>
+            </div>
+        </section>
+        <section class="days">
+            <header class="day5">
+                <h4 class="day-date"></h4>
+            </header>
+            <div class="">
+                <p>Temp Example</p>
+                <img src="" alt="">
+                <hr>
+                <p>Description: </p>
+                <p>Humidity: </p>
+                <hr>
+                <p>Wind: </p>
+                <hr>
+                <p>Pressure: </p>
+            </div>
+        </section>
+    </article>
     <div id="map" class="map"></div>
-
-</section>
-<section class="ajax-section">
-    <div class="container">
-        <ul class="cities"></ul>
-    </div>
-</section>
+    <section class="ajax-section">
+        <div class="container">
+            <ul class="cities"></ul>
+        </div>
+    </section>
+</main>
 <!-- OpenWeatherMap JS -->
 <script src="../js/keys.js"></script>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
@@ -59,7 +143,7 @@
     const map = new mapboxgl.Map({
         container: "map",
         style: "mapbox://styles/mapbox/satellite-streets-v11",
-        center: [-75.177470, 39.945311],
+        center: [-97.133068, 33.2148412],
         zoom: 12.5
     });
     $.get('https://api.openweathermap.org/data/2.5/forecast', {
