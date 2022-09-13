@@ -194,14 +194,14 @@
         .addTo(map);
 
     //  Click Event
-    $(".btn").on("click", function() {
+    $(".btn").on("click", function () {
         let place = $("#current-location").val();
         $("#current-city").text(place);
         geocode(place, MAPBOX_TOKEN).then(function (result) {
             console.log(result);
             map.setCenter(result);
             map.setZoom(15);
-    });
+        });
 
     });
 </script>
