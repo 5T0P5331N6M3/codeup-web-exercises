@@ -1,0 +1,27 @@
+header {
+    font-family: "Sama Gurmukhi", sans-serif;
+    background-color: rgb(1,123,254);
+    color: white;
+    padding: .1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1em;
+    padding-right: 4em;
+
+
+}
+
+p {
+}
+
+.btn {
+    background-color: rgb(1,123,254);
+    color: white;
+}
+
+.current-city {
+    /*color: white;*/
+    display: flex;
+    justify-content: flex-end;
+}

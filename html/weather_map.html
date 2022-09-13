@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather Map</title>
+    <!-- Mapbox CSS -->
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet'/>
     <!-- HTML CSS -->
     <link rel="stylesheet" href="../css/weather_map.css">
@@ -19,16 +20,18 @@
             margin: 0;
             padding: 0;
         }
-
     </style>
 </head>
 <body>
+<header>
+    <h2 class="heading">Weather, Not App</h2><p class="current-city">Current City: </p>
+</header>
 <section class="top-header">
     <div class="container">
-        <h1 class="heading">Weather, Not App</h1>
         <form action="">
-            <input type="text" placeholder="City, State or Zipcode">
-            <button type="submit">Find</button>
+            <input type="text" class="" placeholder="City, State or Zipcode">
+            <label for=""></label>
+            <button class="btn" type="submit">Find</button>
         </form>
     </div>
     <div id="map" class="map"></div>
@@ -46,7 +49,6 @@
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
 
 <!-- Mapbox Geocoder Util Methods-->
-
 <script src="../js/mapbox-geocoder-utils.js"></script>
 
 <!-- Custom JS -->
