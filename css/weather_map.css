@@ -35,10 +35,10 @@ p {
     margin-bottom: 1em;
 }
 
-.card {
+section .card {
     border: 1px solid rgb(247, 247, 247);
     border-radius: 5px;
-    /*width: 30%;*/
+
 }
 
 hr {
