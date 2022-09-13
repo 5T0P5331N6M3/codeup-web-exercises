@@ -25,19 +25,20 @@
 <body>
 <header class="heading">
     <h2>Weather, Not App</h2>
-    <p class="current-city">Current City: </p>
+    <p class="current-city">Current City: <span id="current-city"></span></p>
 </header>
 <main id="main-container">
     <section class="top-header">
         <div class="container">
             <form action="" id="form-container">
-                <label for="btn-search">Place</label>
-                <input type="text" id="btn-search" placeholder="City, State">
-                <button class="btn" type="submit">Find</button>
+                <label for="current-location">Place</label>
+                <input type="text" id="current-location" placeholder="City, State">
+                <button class="btn" type="button">Find</button>
             </form>
         </div>
     </section>
     <article id="cards" class="cards">
+        <!-- Card 1 -->
         <section class="card">
             <header class="day1">
                 <h4 class="day-date"></h4>
@@ -56,6 +57,7 @@
                 </div>
             </div>
         </section>
+        <!-- Card 2 -->
         <section class="card">
             <header class="day2">
                 <h4 class="day-date"></h4>
@@ -74,6 +76,7 @@
                 </div>
             </div>
         </section>
+        <!-- Card 3 -->
         <section class="card">
             <header class="day3">
                 <h4 class="day-date"></h4>
@@ -92,6 +95,7 @@
                 </div>
             </div>
         </section>
+        <!-- Card 4 -->
         <section class="card">
             <header class="day4">
                 <h4 class="day-date"></h4>
@@ -110,6 +114,7 @@
                 </div>
             </div>
         </section>
+        <!-- Card 5 -->
         <section class="card">
             <header class="day5">
                 <h4 class="day-date"></h4>
@@ -129,6 +134,7 @@
             </div>
         </section>
     </article>
+    <!-- Map -->
     <div id="map" class="map"></div>
     <section class="ajax-section">
         <div class="container">
@@ -136,6 +142,7 @@
         </div>
     </section>
 </main>
+
 <!-- OpenWeatherMap JS -->
 <script src="../js/keys.js"></script>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
@@ -149,6 +156,7 @@
 <script>
     <!-- Focus on list[0], list[8], list[16], list[24], list[32] -->
     "use strict";
+
     mapboxgl.accessToken = MAPBOX_TOKEN;
     const map = new mapboxgl.Map({
         container: "map",
@@ -184,6 +192,18 @@
         .setLngLat([-75.177470, 39.945311])
         .setPopup(popup)
         .addTo(map);
+
+    //  Click Event
+    $(".btn").on("click", function() {
+        let place = $("#current-location").val();
+        $("#current-city").text(place);
+        geocode(place, MAPBOX_TOKEN).then(function (result) {
+            console.log(result);
+            map.setCenter(result);
+            map.setZoom(15);
+    });
+
+    });
 </script>
 </body>
 </html>

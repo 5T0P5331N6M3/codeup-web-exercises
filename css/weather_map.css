@@ -58,3 +58,7 @@ hr {
     text-align: center;
     /*background: rgb(247, 247, 247);*/
 }
+
+#current-city {
+    padding: 1em;
+}
