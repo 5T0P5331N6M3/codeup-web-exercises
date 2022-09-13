@@ -174,6 +174,16 @@
         console.log(error);
     });
 
+    const popup = new mapboxgl.Popup()
+        .setLngLat([-75.177470, 39.945311])
+        .setMaxWidth("300px")
+        .setHTML()
+        .addTo(map);
+
+    const marker = new mapboxgl.Marker({draggable: true})
+        .setLngLat([-75.177470, 39.945311])
+        .setPopup(popup)
+        .addTo(map);
 </script>
 </body>
 </html>
