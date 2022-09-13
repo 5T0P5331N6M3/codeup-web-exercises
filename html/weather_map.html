@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather Map</title>
-    <!-- OpenWeatherMap CSS -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet'/>
+    <!-- HTML CSS -->
+    <link rel="stylesheet" href="../css/weather_map.css">
     <!-- Custom CSS for map -->
     <style>
+        #map {
+            width: 100%;
+            height: 700px;
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -21,20 +28,56 @@
         <h1 class="heading">Weather, Not App</h1>
         <form action="">
             <input type="text" placeholder="City, State or Zipcode">
-            <button type="submit">SUBMIT</button>
+            <button type="submit">Find</button>
         </form>
     </div>
+    <div id="map" class="map"></div>
+
 </section>
-<section class="ajex-section">
+<section class="ajax-section">
     <div class="container">
         <ul class="cities"></ul>
     </div>
 </section>
 <!-- OpenWeatherMap JS -->
+<script src="../js/keys.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+
+<!-- Mapbox Geocoder Util Methods-->
+
+<script src="../js/mapbox-geocoder-utils.js"></script>
 
 <!-- Custom JS -->
 <script>
+    <!-- Focus on list[0], list[8], list[16], list[24], list[32] -->
     "use strict";
+    mapboxgl.accessToken = MAPBOX_TOKEN;
+    const map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/mapbox/satellite-streets-v11",
+        center: [-75.177470, 39.945311],
+        zoom: 12.5
+    });
+    $.get('https://api.openweathermap.org/data/2.5/forecast', {
+        appid: OPEN_WEATHER_APPID,
+        lat: -27.0515,
+        lon: 38.4525,
+        units: 'imperial'
+    }).done(function (data) {
+        console.log(data);
+
+        // console.log(days);
+
+        // dealing with time
+        // convert API date/time response to JS Date Object
+        // ... new Date(1629461117 * 1000)
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+    }).fail(function (error) {
+        console.log(error);
+    });
+
 </script>
 </body>
 </html>
