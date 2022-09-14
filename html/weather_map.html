@@ -213,6 +213,11 @@
     //     .setHTML()
     //     .addTo(map);
 
+
+    // let temp = data[i].main.temp;
+    // let description = data[i].weather[0].description;
+    // let humidity = data[i].main.humidity;
+    // let pressure = data[i].main.pressure;
     <!-- User Click Event for Marker Drop -->
     map.on('click', function add_marker(event) {
         console.log(event);
@@ -223,27 +228,35 @@
             // .setPopup(popup)
             .addTo(map);
     //    Add API to cards
-        $.get('https://api.openweathermap.org/data/2.5/forecast', {
+
+       $.get('https://api.openweathermap.org/data/2.5/forecast', {
             appid: OPEN_WEATHER_APPID,
             lat: coordinates.lat,
             lon: coordinates.lng,
             units: 'imperial'
         }).done(function(data) {
-            // let decription = data.
-            console.log(data);
+           // log each array item confirming functionality
+           console.log(data.list[0].main.humidity);
+           console.log(data.list[0].weather[0].description);
+           console.log(data.list[0].main.pressure)
         }).fail(function (error) {
             console.log(error);
         });
+
         function dailyForecast(data) {
+            let html = "";
+            html = ""
             for (let i = 0; i <= 32; i += 9) {
                 let temp = data[i].main.temp;
-                let description = data[i].weather[0].description;
-                let humidity = data[i].main.humidity;
-                let pressure = data[i].main.pressure;
-                // $(".description").html(function(data) {
+                let description = data.list[i].weather[0].description;
+                let humidity = data.main.humidity;
+                let pressure = data.main.pressure;
                 //
-                // });
+                //
                 // console.log(temp);
+                // console.log(humidity);
+                // console.log(description);
+                // console.log(pressure);
             }
         }
     });
@@ -299,9 +312,9 @@
                     console.log(error);
                 });
             }
-
             marker.on("dragend", onDragEnd);
         //     add WX API Info
+
         });
 
 
