@@ -136,6 +136,7 @@
     </article>
     <!-- Map -->
     <div id="map" class="map"></div>
+    <pre id="coordinates" class="coordinates"></pre>
     <section class="ajax-section">
         <div class="container">
             <ul class="cities"></ul>
@@ -154,20 +155,44 @@
 
 <!-- Custom JS -->
 <script>
-    <!-- Focus on list[0], list[8], list[16], list[24], list[32] -->
+
+    // Focus
+    // on
+    // list[0], list[8], list[16], list[24], list[32]
     "use strict";
 
     mapboxgl.accessToken = MAPBOX_TOKEN;
+    const coordinates = document.getElementById('coordinates');
     const map = new mapboxgl.Map({
         container: "map",
         style: "mapbox://styles/mapbox/satellite-streets-v11",
+        minZoom: 10,
+        maxZoom: 18,
         center: [-97.133068, 33.2148412],
-        zoom: 12.5
+        // zoom: 16.5,
+        scrollZoom: false
     });
-    $.get('https://api.openweathermap.org/data/2.5/forecast', {
+
+    function rotate() {
+        map.easeTo({bearing: 40, duration: 10000, pitch: 0, zoom: 18});
+        window.setTimeout(() => {
+            map.easeTo({bearing: 180, duration: 10000, pitch: 0, zoom: 14});
+            window.setTimeout(() => {
+                map.easeTo({bearing: 270, duration: 10000, pitch: 0, zoom: 16});
+                window.setTimeout(() => {
+                    rotate();
+                }, 10000);
+            }, 10000);
+        }, 10000);
+        map.on("load", () => {
+            rotate();
+        });
+    }
+
+    let fetch = $.get('https://api.openweathermap.org/data/2.5/forecast', {
         appid: OPEN_WEATHER_APPID,
-        lat: -27.0515,
-        lon: 38.4525,
+        lat: lat,
+        lon: long,
         units: 'imperial'
     }).done(function (data) {
         console.log(data);
@@ -188,9 +213,22 @@
     //     .setHTML()
     //     .addTo(map);
 
+    <!-- User Click Event for Marker Drop -->
+    map.on('click', function add_marker(event) {
+        console.log(event);
+        var coordinates = event.lngLat;
+        console.log('Lng:', coordinates.lng, 'Lat:', coordinates.lat), 'id', event.id;
+        const marker = new mapboxgl.Marker({draggable: true})
+            .setLngLat([coordinates.lng, coordinates.lat])
+            // .setPopup(popup)
+            .addTo(map);
+        //    Add API to cards
+        $.get(fetch).done(function (data) {
+            console.log(data);
+        })
+    });
 
-
-    //  Click Event
+    <!-- Click Event -->
     $(".btn").on("click", function () {
         let place = $("#current-location").val();
         $("#current-city").text(place);
@@ -206,22 +244,45 @@
                 .setLngLat([lng, lat])
                 // .setPopup(popup)
                 .addTo(map);
-            reverseGeocode({lng: lng, lat: lat}, MAPBOX_TOKEN).then(function(result) {
+            reverseGeocode({lng: lng, lat: lat}, MAPBOX_TOKEN).then(function (result) {
                 let string = result.split(",");
                 $("#current-city").text(string[1]);
                 console.log(string[1]);
                 console.log(result);
-            });
-            marker.on("dragEnd", function(e) {
-                // let lng = result[0];
-                // let lat = result[1];
-                let string = result.split(",");
-                $("#current-city").text(string[1]);
-                let coordinates = e.target.getLngLat();
-                console.log(coordinates);
 
+                // rotate();
 
+                $.get('https://api.openweathermap.org/data/2.5/forecast', {
+                    appid: OPEN_WEATHER_APPID,
+                    lat: lat,
+                    lon: lng,
+                    units: 'imperial'
+                }).done(function (data) {
+                    console.log(data);
+                }).fail(function (error) {
+                    console.log(error);
+                });
             });
+
+            <!-- Dragging Marker-->
+            function onDragEnd() {
+                const lngLat = marker.getLngLat();
+                coordinates.style.display = "block";
+                coordinates.innerHTML = `Longitude: ${lngLat.lng}<br />Latitude: ${lngLat.lat}`;
+                $.get('https://api.openweathermap.org/data/2.5/forecast', {
+                    appid: OPEN_WEATHER_APPID,
+                    lat: lngLat.lat,
+                    lon: lngLat.lng,
+                    units: 'imperial'
+                }).done(function (data) {
+                    console.log(data);
+                }).fail(function (error) {
+                    console.log(error);
+                });
+            }
+
+            marker.on("dragend", onDragEnd);
+            //     add WX API Info
         });
 
 
