@@ -39,7 +39,7 @@
     </section>
     <article id="cards" class="cards">
         <!-- Card 1 -->
-        <section class="card">
+        <section class="card1">
             <header class="day1">
                 <h4 class="day-date"></h4>
             </header>
@@ -166,11 +166,11 @@
     const map = new mapboxgl.Map({
         container: "map",
         style: "mapbox://styles/mapbox/satellite-streets-v11",
-        minZoom: 10,
-        maxZoom: 18,
+        // minZoom: 10,
+        // maxZoom: 18,
         center: [-97.133068, 33.2148412],
-        // zoom: 16.5,
-        scrollZoom: false
+        zoom: 16.5,
+        // scrollZoom: false
     });
 
     function rotate() {
@@ -189,23 +189,23 @@
         });
     }
 
-    let fetch = $.get('https://api.openweathermap.org/data/2.5/forecast', {
-        appid: OPEN_WEATHER_APPID,
-        lat: lat,
-        lon: long,
-        units: 'imperial'
-    }).done(function (data) {
-        console.log(data);
-
-        // console.log(days);
-
-        // dealing with time
-        // convert API date/time response to JS Date Object
-        // ... new Date(1629461117 * 1000)
-        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
-    }).fail(function (error) {
-        console.log(error);
-    });
+    // let fetch = $.get('https://api.openweathermap.org/data/2.5/forecast', {
+    //     appid: OPEN_WEATHER_APPID,
+    //     lat: lat,
+    //     lon: long,
+    //     units: 'imperial'
+    // }).done(function (data) {
+    //     console.log(data);
+    //
+    //     // console.log(days);
+    //
+    //     // dealing with time
+    //     // convert API date/time response to JS Date Object
+    //     // ... new Date(1629461117 * 1000)
+    //     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+    // }).fail(function (error) {
+    //     console.log(error);
+    // });
 
     // const popup = new mapboxgl.Popup()
     //     .setLngLat([-75.177470, 39.945311])
@@ -216,19 +216,39 @@
     <!-- User Click Event for Marker Drop -->
     map.on('click', function add_marker(event) {
         console.log(event);
-        var coordinates = event.lngLat;
+        let coordinates = event.lngLat;
         console.log('Lng:', coordinates.lng, 'Lat:', coordinates.lat), 'id', event.id;
         const marker = new mapboxgl.Marker({draggable: true})
             .setLngLat([coordinates.lng, coordinates.lat])
             // .setPopup(popup)
             .addTo(map);
-        //    Add API to cards
-        $.get(fetch).done(function (data) {
+    //    Add API to cards
+        $.get('https://api.openweathermap.org/data/2.5/forecast', {
+            appid: OPEN_WEATHER_APPID,
+            lat: coordinates.lat,
+            lon: coordinates.lng,
+            units: 'imperial'
+        }).done(function(data) {
+            // let decription = data.
             console.log(data);
-        })
+        }).fail(function (error) {
+            console.log(error);
+        });
+        function dailyForecast(data) {
+            for (let i = 0; i <= 32; i += 9) {
+                let temp = data[i].main.temp;
+                let description = data[i].weather[0].description;
+                let humidity = data[i].main.humidity;
+                let pressure = data[i].main.pressure;
+                // $(".description").html(function(data) {
+                //
+                // });
+                // console.log(temp);
+            }
+        }
     });
 
-    <!-- Click Event -->
+    <!-- Button Click Event -->
     $(".btn").on("click", function () {
         let place = $("#current-location").val();
         $("#current-city").text(place);
@@ -264,7 +284,6 @@
                 });
             });
 
-            <!-- Dragging Marker-->
             function onDragEnd() {
                 const lngLat = marker.getLngLat();
                 coordinates.style.display = "block";
@@ -282,7 +301,7 @@
             }
 
             marker.on("dragend", onDragEnd);
-            //     add WX API Info
+        //     add WX API Info
         });
 
 
