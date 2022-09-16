@@ -74,6 +74,10 @@
 
     users.forEach((user) => names.push(user.name));
 
+    // Include both:
+
+
+
     // TODO: replace `var` with `let` in the following declaration
     // var developers = [];
     let developers = []
@@ -100,9 +104,13 @@
         // developers.forEach(function (developer) {
 
         // TODO: rewrite the assignment below to use template strings
-        list += '<li>' + developer + '</li>';
-    })
-    ;
-    list += '</ul>';
+    //     list += '<li>' + developer + '</li>';
+    // })
+    // ;
+    // list += '</ul>';
+
+    list += `<li> ${developer}`;
+    };
+list +='</ul>';
 
 
