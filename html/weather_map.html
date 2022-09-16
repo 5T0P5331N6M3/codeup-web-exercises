@@ -173,11 +173,12 @@
         // scrollZoom: false
     });
 
+    <!-- Map Rotate: UnComment Under Button Click Event Marker -->
     function rotate() {
         map.easeTo({bearing: 40, duration: 10000, pitch: 0, zoom: 18});
         window.setTimeout(() => {
             map.easeTo({bearing: 180, duration: 10000, pitch: 0, zoom: 14});
-            window.setTimeout(() => {
+            window.setTimeout(() => {lkjbghytfvrcdexsgthyrdeswaqdrftgyhrvcdesxwzacfvg bh
                 map.easeTo({bearing: 270, duration: 10000, pitch: 0, zoom: 16});
                 window.setTimeout(() => {
                     rotate();
@@ -227,18 +228,19 @@
             .setLngLat([coordinates.lng, coordinates.lat])
             // .setPopup(popup)
             .addTo(map);
-    //    Add API to cards
+        //    Add API to cards
 
-       $.get('https://api.openweathermap.org/data/2.5/forecast', {
+        $.get('https://api.openweathermap.org/data/2.5/forecast', {
             appid: OPEN_WEATHER_APPID,
             lat: coordinates.lat,
             lon: coordinates.lng,
             units: 'imperial'
-        }).done(function(data) {
-           // log each array item confirming functionality
-           console.log(data.list[0].main.humidity);
-           console.log(data.list[0].weather[0].description);
-           console.log(data.list[0].main.pressure)
+        }).done(function (data) {
+            // log each array item confirming functionality
+            console.log(data.list[0].main.humidity);
+            console.log(data.list[0].weather[0].description);
+            console.log(data.list[0].main.pressure);
+            dailyForecast(data);
         }).fail(function (error) {
             console.log(error);
         });
@@ -246,17 +248,21 @@
         function dailyForecast(data) {
             let html = "";
             html = ""
+            let temp = "";
+            let description = "";
+            let humidity = "";
+            let pressure = "";
             for (let i = 0; i <= 32; i += 9) {
-                let temp = data[i].main.temp;
-                let description = data.list[i].weather[0].description;
-                let humidity = data.main.humidity;
-                let pressure = data.main.pressure;
+                temp = data[i].main.temp;
+                description = data.list[i].weather[0].description;
+                humidity = data.main.humidity;
+                pressure = data.main.pressure;
                 //
                 //
-                // console.log(temp);
-                // console.log(humidity);
-                // console.log(description);
-                // console.log(pressure);
+                console.log(temp);
+                console.log(humidity);
+                console.log(description);
+                console.log(pressure);
             }
         }
     });
@@ -283,6 +289,7 @@
                 console.log(string[1]);
                 console.log(result);
 
+                <!-- UnComment for Map Rotation -->
                 // rotate();
 
                 $.get('https://api.openweathermap.org/data/2.5/forecast', {
@@ -312,8 +319,9 @@
                     console.log(error);
                 });
             }
+
             marker.on("dragend", onDragEnd);
-        //     add WX API Info
+            //     add WX API Info
 
         });
 
