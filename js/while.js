@@ -2,13 +2,13 @@
 
 /*do {
     //body
-} while(/*condition*/);
+// } while(/*condition*/
 
 //While Loop: Executes code block as long as a certain condition is true.
 
-while (/*condition*/) {
-    //body
-}*/
+// while (/*condition*/) {
+//     //body
+// }*/
 
 //  1. Create a file named while.js in the js directory.
 //  2. Create a while loop using console.log() creating the output shown below.
@@ -46,3 +46,10 @@ while (/*condition*/) {
 // Yay! I sold them all! // If there are no more cones
 
 //  1.(sic) Finally, commit the changes to git repository, and push to GitHub.
+// function  sum(a,b){
+//      return a+b;
+// }
+let num1 = 10;
+// let num2 =20;
+// let num3 = sum(num1,num2);
+console.log(num1);

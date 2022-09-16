@@ -110,7 +110,7 @@
     // list += '</ul>';
 
     list += `<li> ${developer}`;
-    };
+    }
 list +='</ul>';
 
 
