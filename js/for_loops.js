@@ -2,18 +2,21 @@
 //For Loop: Initialization; check condition; if True condition, body, increment, back to condition;
 //          if False condition, done.
 //for (/*initialization*/; /*condition*/; /*increment*/) {
-    //body
-}
+//body
+
 //  1. Create a file named for_loops.js inside js directory; link to loops.html
 //      Cannot link.
 //  2. Create a function named showMultiplicationTable accepting a number and
 //      console.logs the multiplication table for that number (just multiply by the numbers 1-10.
-function showMultiplicationTable(x) {
-    for ( ; ; ;) {
+function showMultiplicationTable(num) {
 
+    for (let i = 1; i <= 10; i++) {
+        console.log(num * i);
     }
-    console.log(showMultiplicationTable);
-}
+};
+
+showMultiplicationTable(7)
+
 //  3. Use a for loop and the code from the previous lessons to generate 10 random numbers between 20 and 200,
 //      and output to the console whether each number is odd or even.
 //  For example:
@@ -22,6 +25,7 @@ function showMultiplicationTable(x) {
 // 24 is even
 // 199 is odd
 // ...
+
 
 //  4. Create a for loop using console.log to create the output shown below
 // 1
@@ -33,6 +37,11 @@ function showMultiplicationTable(x) {
 // 7777777
 // 88888888
 // 999999999
+
+for (let i = 1; i <= 9; i ++) {
+    console.log(i.toString().repeat(i));
+}
+// console.log()
 
 //  5. Create a for loop using console.log to create output shown below.
 //100
