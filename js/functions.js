@@ -20,6 +20,7 @@
 function sayHello(name) {
     return "Hello, " + name;
 }
+
 // sayHello("Codeup");
 console.log(sayHello("Codeup" + "!"));
 /**
@@ -53,7 +54,7 @@ console.log(helloMessage);
 
 /*Re-Try*/
 
-//my name as a string? Pass my name to sayHello. I should see what same output?
+//my name as a string? Pass my name to sayHello. Should print Hello, Cas
 let myName = "Cas"
 sayHello(myName);
 console.log(sayHello(myName));
@@ -69,8 +70,8 @@ console.log(sayHello(myName));
  * > isTwo(2) // returns true
  * > isTwo(3) // returns false
  *
-     * Call the function 'isTwo' passing the variable 'random' as a argument.
-     *
+ * Call the function 'isTwo' passing the variable 'random' as a argument.
+ *
  * console.log *outside of the function* to check your work (you should see a
  * different result everytime you refresh the page if you are using the random
  * number)
@@ -82,11 +83,14 @@ console.log(sayHello(myName));
 
 /*Re-Try*/
 var random = Math.floor((Math.random() * 3) + 1);
+
 function isTwo(num) {
     return num === 2;
 }
+
 isTwo(random);
 console.log(isTwo(random));
+//Prints either False or True, randomly only when including the entire function, not the log.
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -114,12 +118,13 @@ console.log(isTwo(random));
 //  Need variable for tip percentage and total of the bill
 //  Return amount to tip. Does this mean return a prompt?
 //  Example has % * total bill, returning tip amount; ergo, need variables.
-function calculateTip(tipPercentage, totalBill) {
-    let tip = prompt("What percentage would you like to tip?");
-    let tipPercentage = tip *
-    return tipPercentage * totalBill;
-}
-
+// function calculateTip(tipPercentage, totalBill) {
+//     let tip = prompt("What percentage would you like to tip?");
+//     let tipPercentage = tip *
+//     let total = (totalBill)
+//     // return tipPercentage * totalBill;
+// }
+// I'm still having trouble with this one, and waiting for instructor help. the Haskell Web Exercise does not have this listed.
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
@@ -135,7 +140,7 @@ var userInput = prompt('Tip Amount (%): ');*/
 // alert("Your tip should be " + userTipResult);
 
 /*Re-Try*/
-
+//Still need help with previous task to complete this one.
 
 /**
  * TODO:
@@ -151,11 +156,18 @@ var userInput = prompt('Tip Amount (%): ');*/
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
-// function applyDiscount(price, discount) {
-//     //var originalPrice
-//     //var discountPercentage
-//     return console.log(price - (price * discount));//console log checking algo//
-// }
-// applyDiscount(45.99, 0.12);
+function applyDiscount(price, discount) {
+    //var originalPrice
+    //var discountPercentage
+    return console.log(price - (price * discount));//console log checking algo//
+}
+applyDiscount(45.99, 0.12);
 
-/*Re-Try*/
+// /*Re-Try*/
+function applyDiscount(priceBeforeDiscount, discountPercentage) {
+    let userInput = prompt ('Tip Amount in Percentage ');
+    let originalPrice = 420;
+    return (priceBeforeDiscount * 100) / userInput;
+
+}
+// Still Lost with all of these. Need more help.
