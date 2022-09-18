@@ -59,9 +59,10 @@
 <br>
 
 <h2>Build Your Own Pizza!</h2>
+
 <main>
     <!-- Cards for Choice Input Forms-->
-    <div class="container">
+    <section class="container">
         <!-- Main Tabs (3) -->
         <ul class="nav nav-tabs">
             <li class="active" id="crust-size">
@@ -82,14 +83,14 @@
                     Toppings</a>
             </li>
         </ul>
-        <!-- div has h6 across all tabs as required. Start Container here, and resize for entire container-->
-        <div class="container-crust">
-            <div class="size-crust d-flex align-items-center w-100">
+        <!-- Crust Size Container -->
+        <div>
+            <div class="size-crust d-flex align-items-center square rounded-top">
                 <h6>Choose Size and Crust</h6>
             </div>
             <div class="choices-card">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-header">
+                <div class="card" style="width: 100%">
+                    <div class="card-header" style="width: 100%">
                         Hand Tossed
                     </div>
                     <ul class="list-group list-group-flush">
@@ -107,7 +108,7 @@
                             </label></li>
                     </ul>
                 </div>
-                <br>
+
                 <div class="card" style="width: 18rem;">
                     <div class="card-header">
                         Crispy Thin
@@ -139,7 +140,7 @@
 
             </div>
         </div>
-    </div>
+    </section>
 </main>
 
 <!--jsDelivr script here-->
