@@ -22,17 +22,17 @@
  * console.logging the function's return value
  */
 
-/*function analyzeColor(colorName) {
+function analyzeColor(colorName) {
 
     if (colorName === "green") {
-        alert("O'Doyle Rules!");
+        alert("Color is Green");
     } else if (colorName === "blue") {
-        alert("Politicians suck!");
+        alert("Color is Blue");
     } else {
-        alert("I don't know anything about " + colorName);
+        alert("I don't know this color " + colorName + " you typed.");
     }
 }
-analyzeColor("blue");*/
+analyzeColor("Unicorn");
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -50,6 +50,9 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 /analyzeColor(randomColor)
     /console.log(analyzeColor);*/
 
+analyzeColor(randomColor);
+console.log(analyzeColor(color));
+// Response is not random; keeps printing out "indigo".
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
