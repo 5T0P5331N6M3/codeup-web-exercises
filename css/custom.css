@@ -7,11 +7,11 @@
 .bg-light>h1{
     /*color: dimgrey;*/
 }
- .btn {
-     margin: 0 0 0 10px;
-     border-color: blue;
-     color: blue;
- }
+ /*.btn {*/
+ /*    !*margin: 0 0 0 10px;*!*/
+ /*    border-color: blue;*/
+ /*    color: blue;*/
+ /*}*/
 .bi {
     margin: 0 0 0 650px;
 }

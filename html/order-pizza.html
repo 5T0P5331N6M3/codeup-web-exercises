@@ -55,93 +55,156 @@
         </div>
     </div>
 </header>
-
-<br>
-
-<h2>Build Your Own Pizza!</h2>
-
 <main>
     <!-- Cards for Choice Input Forms-->
     <section class="container">
+        <h1 class="mt-5">Build your own pizza!</h1>
         <!-- Main Tabs (3) -->
         <ul class="nav nav-tabs">
             <li class="active" id="crust-size">
-                <a data-toggle="tab" class="nav-link active" aria-current="page" href="#"><span
-                        class="badge rounded-pill bg-secondary">1</span>Size and Crust</a>
+                <a data-toggle="tab" class="nav-link active" aria-current="page" href="#crust-size"><span
+                        class="badge rounded-pill bg-secondary" style="margin-right: .5em">1</span>Size and Crust</a>
                 <div class="size-crust d-flex align-items-center w-100">
-                    <!--<h6>Choose Size and Crust</h6>-->
                 </div>
             </li>
             <li class="nav-item" id="cheese-sauce">
-                <a data-toggle="tab" class="nav-link active" href="#"><span
-                        class="badge rounded-pill bg-secondary">2</span>Cashew Cheese and
+                <a data-toggle="tab" class="nav-link active" href="#cheese-sauce"><span
+                        class="badge rounded-pill bg-secondary" style="margin-right: .5em">2</span>Cashew Cheese and
                     Sauce</a>
             </li>
             <li class="nav-item" id="toppings">
-                <a data-toggle="tab" class="nav-link active" href="#"><span
-                        class="badge rounded-pill bg-secondary">3</span>Vegan Only
+                <a data-toggle="tab" class="nav-link active" href="#toppings"><span
+                        class="badge rounded-pill bg-secondary" style="margin-right: .5em">3</span>Vegan Only
                     Toppings</a>
             </li>
         </ul>
-
-        <div class="tab-content border 2px solid">
+        <!-- Tab 1-->
+        <header class="tab-content border 2px solid">
             <div class="size-crust d-flex align-items-center square rounded-top">
                 <h6>Choose Size and Crust</h6>
             </div>
             <!-- Crust Size Container -->
-            <div class="customer-selection">
-                <div class="card m-3 w-85">
-                    <div class="card-header" style="width: 100%">
-                        Hand Tossed
+            <section class="customer-selection">
+                <article>
+                    <!-- Hand Tossed Card -->
+                    <div class="card m-3 w-85">
+                        <div class="card-header" style="width: 100%">
+                            Hand Tossed
+                        </div>
+                        <!-- Hand Tossed Crust Size -->
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Garlic seasoned crust with a rich, fake-buttery taste</li>
+                            <li class="list-group-item"><input class="form-check-input" type="radio"
+                                                               name="flexRadioDefault"
+                                                               id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Small (10")
+                                </label>
+                            </li>
+                            <li class="list-group-item"><input class="form-check-input" type="radio"
+                                                               name="flexRadioDefault"
+                                                               id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Medium (12")
+                                </label>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Garlic seasoned crust with a rich, fake-buttery taste</li>
-                        <li class="list-group-item"><input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                           id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                Small (10")
-                            </label>
-                        </li>
-                        <li class="list-group-item"><input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                           id="flexRadioDefault2" checked>
-                            <label class="form-check-label" for="flexRadioDefault2">
-                                Medium (12")
-                            </label></li>
-                    </ul>
-                </div>
-
-                <div class="card m-3 w-85">
-                    <div class="card-header">
-                        Crispy Thin
+                    <!-- Crispy Thin Card -->
+                    <div class="card m-3 w-85">
+                        <div class="card-header">
+                            Crispy Thin
+                        </div>
+                        <!--Crispy Thin Crust Size -->
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Thin enough for optimum crispy to crunch ratio</li>
+                            <li class="list-group-item"><input class="form-check-input" type="radio"
+                                                               name="flexRadioDefault"
+                                                               id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Medium (12")
+                                </label>
+                            </li>
+                            <li class="list-group-item"><input class="form-check-input" type="radio"
+                                                               name="flexRadioDefault"
+                                                               id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Large (14")
+                                </label>
+                            </li>
+                        </ul>
+                        <div class="card">
+                            <button type="button" class="btn-lg m-4 p-2 square rounded bg-primary text-white">Next
+                                Step >
+                            </button>
+                        </div>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Thin enough for optimum crispy to crunch ratio</li>
-                        <li class="list-group-item"><input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                           id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                Medium (12")
-                            </label>
-                        </li>
-                        <li class="list-group-item"><input class="form-check-input" type="radio" name="flexRadioDefault"
-                                                           id="flexRadioDefault2" checked>
-                            <label class="form-check-label" for="flexRadioDefault2">
-                                Large (14")
-                            </label></li>
-                    </ul>
-                </div>
-                <div>
-                    <input class="btn btn-primary" type="submit" value="Submit">
-                </div>
+                </article>
+            </section>
+        </header>
+        <!-- Tab 2 -->
+        <header class="tab-content border 2px solid">
+            <div class="size-crust d-flex align-items-center square rounded-top">
+                <h6>Choose Cheese and Sauce</h6>
             </div>
-            <!--        </article>-->
-            <div class="form-check">
+            <!-- Cheese and Sauce Container -->
+            <section class="customer-selection">
+                <article>
+                    <!-- Vegan Cheese Card -->
+                    <div class="card m-3 w-85">
+                        <div class="card-header" style="width: 100%">
+                            Vegan Cheese
+                        </div>
+                        <!-- Sauce Card -->
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">How Much?</li>
+                            <li class="list-group-item">
+                                <label class="form-check-label" for="cheese-amount"></label>
+                                <select name="cheese-amount" id="cheese-amount">
+                                    <option value="normal">Normal</option>
+                                    <option value="extra">Extra</option>
+                                    <option value="extra-extra">Extra Extra</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Sauce -->
+                    <div class="card m-3 w-85">
+                        <div class="card-header">
+                            Sauce
+                        </div>
+                        <!--Sauce Selection -->
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">What Type?</li>
+                            <select class="m-4" name="cheese-amount" id="sauce-type">
+                                <option value="roaste-garlic">Roasted Garlic</option>
+                                <option value="tomato-basil">Garden</option>
+                                <option value="extra-extra">White</option>
+                                <option value="none">None</option>
+                            </select>
+                            <li class="list-group-item">
 
-            </div>
-            <div class="form-check">
+                            </li>
+                            <li class="list-group-item"><input class="form-check-input" type="radio"
+                                                               name="flexRadioDefault"
+                                                               id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Large (14")
+                                </label>
+                            </li>
+                        </ul>
+                        <footer class="display-flex-row-reverse">
+                            <button type="button" class="btn-crust m-4 p-2 square rounded bg-primary text-white">Next
+                                Step >
+                            </button>
+                        </footer>
+                    </div>
+                </article>
+            </section>
+        </header>
 
-            </div>
-        </div>
     </section>
+
 </main>
 
 <!--jsDelivr script here-->
