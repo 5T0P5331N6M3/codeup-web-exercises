@@ -75,11 +75,11 @@ let lastUser = users[users.length - 1];
 console.log(lastUser);
 const userName = users.reduce((name, user) => {
     if (user === lastUser) {
-        return name + user.name + '.'
+        return  name + 'and ' + user.name + '.'
     } else {
         return name + user.name + ', '
     }
-}, '');
+}, 'Your instructors are ');
 console.log(userName);
 // TODO: Bonus. Use .reduce to get the unique list of languages from the list of users.
 // If users language does not match others, then return as list (array).
