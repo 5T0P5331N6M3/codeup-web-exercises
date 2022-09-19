@@ -8,7 +8,7 @@
         justify-content: center;
         border: 2px solid #CCC;
         padding: 1.5em;
-        width: 100vw;
+        width: 100%;
         margin: 1em;
     }
     h1 {
@@ -17,11 +17,14 @@
         width: 100vw;
         margin: 1em;
     }
-    .nav-links {
-        background-color: #CCFFFF;
+    .nav-links li {
+        background-color: #CCC;
         list-style-type: none;
         display: flex;
         justify-content: center;
+        padding: 1em;
+        margin: 1em;
+        width: 100%;
     }
 }
 
