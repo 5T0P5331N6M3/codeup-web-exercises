@@ -1,6 +1,7 @@
 /* Small devices (phones and pocket devices, 576 and up) */
 @media screen and (min-width:576px) {
     body {
+        box-sizing: border-box;
         max-width: 576px;
         margin: auto;
     }
@@ -45,6 +46,25 @@
         width: 100%;
         margin-left: auto;
         margin-right: auto;
+    }
+    #main h2 {
+        display: inline-block;
+    }
+    #main p {
+        display: inline-block;
+        justify-content: center;
+        margin: 0;
+    }
+    .sub-section {
+        font-style: italic;
+    }
+    footer{
+        font-size: small;
+        display: flex;
+        justify-content: space-between;
+    }
+    #social-media-links {
+    /* How do I include links without adding to HTML? */
     }
 }
 
