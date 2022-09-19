@@ -1,21 +1,34 @@
 /* Small devices (phones and pocket devices, 576 and up) */
 @media screen and (min-width:576px) {
+    body {
+        max-width: 576px;
+        margin: auto;
+    }
     .alert-info a {
         text-decoration: none;
         background-color: #CCFFFF;
         color: #2C3737;
         display: flex;
         justify-content: center;
-        border: 2px solid #CCC;
+        align-items: center;
+        border: 3px solid #CCC;
         padding: 1.5em;
-        width: 100%;
-        margin: 1em;
+        /*width: 100%;*/
+        margin-top: 1.2em;
+        margin-left: 1.2em;
+        margin-right: auto;
     }
     h1 {
         display: flex;
         justify-content: center;
-        width: 100vw;
-        margin: 1em;
+        width: 100%;
+        /*margin: 1em;*/
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*width: 100%;*/
     }
     .nav-links li {
         background-color: #CCC;
@@ -23,14 +36,15 @@
         display: flex;
         justify-content: center;
         padding: 1em;
-        margin: 1em;
-        width: 97%;
+        margin-top: .4em;
+        margin-bottom: .4em;
+        width: 100vw;
+        margin-right: 5em;
     }
     .header-img img {
-        width: 97%;
-        /*display: flex;*/
-        /*justify-content: center;*/
-        margin: 3em;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
