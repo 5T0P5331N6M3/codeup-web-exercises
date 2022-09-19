@@ -24,7 +24,13 @@
         justify-content: center;
         padding: 1em;
         margin: 1em;
-        width: 100%;
+        width: 97%;
+    }
+    .header-img img {
+        width: 97%;
+        /*display: flex;*/
+        /*justify-content: center;*/
+        margin: 3em;
     }
 }
 
