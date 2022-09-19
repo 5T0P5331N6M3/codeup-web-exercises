@@ -82,4 +82,11 @@ const userName = users.reduce((name, user) => {
 }, '');
 console.log(userName);
 // TODO: Bonus. Use .reduce to get the unique list of languages from the list of users.
+// If users language does not match others, then return as list (array).
 
+const listOfLanguages = users.reduce((arr, user) => {
+    let newArray = [...arr, ...user.languages];
+    return [...new Set(newArray)]
+    //    or return [...new Set([...arr, ...user.languages])]
+}, []);
+console.log(listOfLanguages);
