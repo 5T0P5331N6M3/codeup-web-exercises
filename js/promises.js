@@ -8,7 +8,7 @@ fetch('https://api.github.com/users/5T0P5331N6M3/events', {headers: {'Authorizat
 //  TODO: Create a function accepting a GitHub username, and returns a promise resolving returning just the date of the last commit the user made. Reference the github api documentations to achieve this.
 
 function gitUserCommitDate (username) {
-    fetch('https://api.github.com/users/' + username + '/events', {headers: {'Authorization': 'token ' + GITHUB_TOKEN}}).then(respones => respones.json().then(data => {
+    fetch('https://api.github.com/users/' + username + '/events', {headers: {'Authorization': 'token ' + GITHUB_TOKEN}}).then(response => response.json().then(data => {
         // console.log(data);
         const commits = data.filter(event => event.type === "PushEvent");
         console.log(`${username} had their last commit on ${commits[0].created_at}.`)
