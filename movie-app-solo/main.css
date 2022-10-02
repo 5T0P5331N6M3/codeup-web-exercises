@@ -1,7 +1,10 @@
 body {
-    background-size: cover;
-    background: url("Images/Blockbuster_logo.svg") no-repeat top;
+    /*background-size: cover;*/
+    /*background: url("Images/Blockbuster_logo.svg") no-repeat top;*/
     font-family: "American Typewriter", cursive;
+}
+.nav-item a {
+    color: #FFA903;
 }
 .container {
     text-align: center;
@@ -27,20 +30,35 @@ img:hover {
     width: 500px;
     height: 520px;
 }
-button  {
+#searchMovie {
     /*cursor: pointer;*/
     transition: 0.25s ease-in-out;
     width: 200px;
     height: 50px;
     font-size: 20px;
     border-radius: 10px;
-    color: #f1ec09;
-    background-color: #0f3cf3;
+    color: #FFA903;
+    background-color: #0E3FAA;
     outline: none;
 }
-button:hover {
-    background-color: #f1ec09;
-    color: #0f3cf3;
+#search-movie  {
+    /*cursor: pointer;*/
+    transition: 0.25s ease-in-out;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+    color: #FFA903;
+    background-color: #0E3FAA;
+    outline: none;
+}
+#search-movie:hover {
+    background-color: #FFA903;
+    color: #0E3FAA;
+}
+#searchMovie:hover {
+    background-color: #FFA903;
+    color: #0E3FAA;
 }
 /* Small devices (phones and pocket devices, 576 and up) */
 /*@media screen and (min-width: 576px) {*/

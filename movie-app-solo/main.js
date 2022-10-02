@@ -1,13 +1,13 @@
 'use strict';
-let randomMovieArray = ['Game of Thrones', 'Star Wars', 'SuperTroopers', 'Clerks', 'Ready Player One'];
+// let randomMovieArray = ['Game of Thrones', 'Star Wars', 'SuperTroopers', 'Clerks', 'Ready Player One'];
+//
+// let randomNumber = Math.floor((Math.random() * randomMovieArray.length -1) +1);
+// // console.log(randomNumber);
+//
+// let randomMovie = randomMovieArray[randomNumber];
+// // console.log(randomMovie);
 
-let randomNumber = Math.floor((Math.random() * randomMovieArray.length -1) +1);
-// console.log(randomNumber);
-
-let randomMovie = randomMovieArray[randomNumber];
-// console.log(randomMovie);
-
-const url = 'https://www.omdbapi.com/?i=tt3896198&apikey=' + OMDB_KEY + '&t=' + encodeURI(randomMovie)
+const url = 'https://www.omdbapi.com/?i=tt3896198&apikey=' + OMDB_KEY + '&t=' + encodeURI()
 
 function apiCall() {
     // let randomNumber = Math.floor((Math.random() * randomMovieArray.length -1) +1);
