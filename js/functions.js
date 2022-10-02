@@ -8,12 +8,21 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
-function sayHello(name) {
-    //return "Hello, Haskell!";
-    return "Hello ," + name + " !";
-}
-sayHello('Haskell');
+// function sayHello(name) {
+//     //return "Hello, Haskell!";
+//     return "Hello, " + name + "!";
+// }
+// sayHello('Haskell');
+// console.log(sayHello("Haskell"));
 
+/*Re-Try*/
+
+function sayHello(name) {
+    return "Hello, " + name;
+}
+
+// sayHello("Codeup");
+console.log(sayHello("Codeup" + "!"));
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -22,8 +31,13 @@ sayHello('Haskell');
  * console.log 'helloMessage' to check your work
  */
 
-var helloMessage = sayHello("Casanova"); //string literal argument//
-//console.log('helloMessage');
+// var helloMessage = sayHello("Casanova"); //string literal argument//
+// //console.log('helloMessage');
+
+/*Re-Try*/
+
+let helloMessage = sayHello("Cas");
+console.log(helloMessage);
 
 /**
  * TODO:
@@ -31,12 +45,19 @@ var helloMessage = sayHello("Casanova"); //string literal argument//
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
-var myName = "Casanova";
-sayHello(myName); // "pass variable" means place into parameter ().//
+// var myName = "Casanova";
+// sayHello(myName); // "pass variable" means place into parameter ().//
+// console.log(sayHello(myName));
+// // Don't modify the following line, it generates a random number between 1 and 3
+// // and stores it in a variable named random
+// var random = Math.floor((Math.random() * 3) + 1);
+
+/*Re-Try*/
+
+//my name as a string? Pass my name to sayHello. Should print Hello, Cas
+let myName = "Cas"
+sayHello(myName);
 console.log(sayHello(myName));
-// Don't modify the following line, it generates a random number between 1 and 3
-// and stores it in a variable named random
-var random = Math.floor((Math.random() * 3) + 1);
 
 /**
  * TODO:
@@ -49,17 +70,27 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > isTwo(2) // returns true
  * > isTwo(3) // returns false
  *
-     * Call the function 'isTwo' passing the variable 'random' as a argument.
-     *
+ * Call the function 'isTwo' passing the variable 'random' as a argument.
+ *
  * console.log *outside of the function* to check your work (you should see a
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-function isTwo(x) {
-    return x === 2
-}
-isTwo(3);
+// function isTwo(x) {
+//     return x === 2
+// }
+// isTwo(3);
 
+/*Re-Try*/
+var random = Math.floor((Math.random() * 3) + 1);
+
+function isTwo(num) {
+    return num === 2;
+}
+
+isTwo(random);
+console.log(isTwo(random));
+//Prints either False or True, randomly only when including the entire function, not the log.
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -77,11 +108,23 @@ isTwo(3);
     var tipPercentage = x * calculateTip();
     var totalBill = tipPercentage + calculateTip();
     return*/
-function calculateTip(tipPercent, totalBill) {
-    return (tipPercent * totalBill);
-}
-console.log(calculateTip(0.20, 20));
+// function calculateTip(tipPercent, totalBill) {
+//     return (tipPercent * totalBill);
+// }
+// console.log(calculateTip(0.20, 20));
 
+/*Re-Try*/
+//  Create function/name
+//  Need variable for tip percentage and total of the bill
+//  Return amount to tip. Does this mean return a prompt?
+//  Example has % * total bill, returning tip amount; ergo, need variables.
+// function calculateTip(tipPercentage, totalBill) {
+//     let tip = prompt("What percentage would you like to tip?");
+//     let tipPercentage = tip *
+//     let total = (totalBill)
+//     // return tipPercentage * totalBill;
+// }
+// I'm still having trouble with this one, and waiting for instructor help. the Haskell Web Exercise does not have this listed.
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
@@ -91,10 +134,14 @@ console.log(calculateTip(0.20, 20));
 /*var userInput = prompt('Bill Total: ');
 var userInput = prompt('Tip Amount (%): ');*/
 //alert(calculateTip("Tip Percentage?" + calculateTip(prompt("How much would you like to tip?"))), ("Bill Total"));
-var userTip = prompt("Tip amount?");
-var userBill = prompt("Bill Total?");
-var userTipResult = calculateTip(userTip, userBill);
-alert("Your tip should be " + userTipResult);
+// var userTip = prompt("Tip amount?");
+// var userBill = prompt("Bill Total?");
+// var userTipResult = calculateTip(userTip, userBill);
+// alert("Your tip should be " + userTipResult);
+
+/*Re-Try*/
+//Still need help with previous task to complete this one.
+
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
@@ -115,3 +162,12 @@ function applyDiscount(price, discount) {
     return console.log(price - (price * discount));//console log checking algo//
 }
 applyDiscount(45.99, 0.12);
+
+// /*Re-Try*/
+function applyDiscount(priceBeforeDiscount, discountPercentage) {
+    let userInput = prompt ('Tip Amount in Percentage ');
+    let originalPrice = 420;
+    return (priceBeforeDiscount * 100) / userInput;
+
+}
+// Still Lost with all of these. Need more help.

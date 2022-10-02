@@ -1,0 +1,86 @@
+<!--
+Mini - Exercise 2 (after markers and popups)
+In this file, create a Mapbox map that shows Washington D.C. and with a marker on the Lincoln Memorial.
+
+Add a popup to the Lincoln Memorial marker that contains the text "Lincoln Memorial"
+
+Bonus: when the marker is dragged and released, display the coordinates in an h1
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox 2</title>
+    <!-- Mapbox CSS -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet'/>
+    <!-- Custom CSS -->
+    <style>
+        #map {
+            /* the width and height may be set to any size */
+            width: 100%;
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+
+<h1></h1>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+
+<!-- Mapbox JS -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+
+<script src="../js/keys.js"></script>
+
+
+<!-- Custom JS -->
+<!--Create map showing D.C. and a marker on Lincoln Memorial-->
+
+<script>
+    mapboxgl.accessToken = MAPBOX_TOKEN;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 12,
+        center: [-77.0369, 38.9072]
+    });
+
+    const popup = new mapboxgl.Popup()
+        .setLngLat([-77.0502, 38.8893])
+        .setMaxWidth("300px")
+        .setHTML("<h2>Lincoln Memorial</h2>")
+        .addTo(map);
+
+    const marker = new mapboxgl.Marker({draggable: true})
+        .setLngLat([-77.0502, 38.8893])
+        .setPopup(popup)
+        .addTo(map);
+
+
+
+    //  Bonus: when the marker is dragged and released, display the coordinates in an h1
+
+    marker.on("dragend", function() {
+        let coordinates = marker.getLngLat();
+        console.log(coordinates);
+        console.log(coordinates.lat);
+        console.log(coordinates.lng);
+        $("h1").html("Latitude: " + coordinates.lat + "<br> Longitude: " + coordinates.lng)
+    })
+
+    // function onDragEnd() {
+    //
+    // }
+    // const lngLat = marker.getLngLat();
+    // coordinates.style.display = "block";
+    // coordinates.innerHTML = `Longitude :
+    //     ${lngLat.lng}<br />Latitude:
+    //     ${lngLat.lat}`;
+    //
+    //     marker.on("dragend", onDragEnd):
+</script>
+</body>
+</html>

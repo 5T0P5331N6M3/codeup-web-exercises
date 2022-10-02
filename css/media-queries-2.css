@@ -1,0 +1,80 @@
+/* Small devices (phones and pocket devices, 576 and up) */
+@media screen and (min-width:576px) {
+    body {
+        box-sizing: border-box;
+        max-width: 576px;
+        margin: auto;
+    }
+    .alert-info a {
+        text-decoration: none;
+        background-color: #CCFFFF;
+        color: #2C3737;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid #CCC;
+        padding: 1.5em;
+        /*width: 100%;*/
+        margin-top: 1.2em;
+        margin-left: 1.2em;
+        margin-right: auto;
+    }
+    h1 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        /*margin: 1em;*/
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*width: 100%;*/
+    }
+    .nav-links li {
+        background-color: #CCC;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        padding: 1em;
+        margin-top: .4em;
+        margin-bottom: .4em;
+        width: 100vw;
+        margin-right: 5em;
+    }
+    .header-img img {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #main h2 {
+        display: inline-block;
+    }
+    #main p {
+        display: inline-block;
+        justify-content: center;
+        margin: 0;
+    }
+    .sub-section {
+        font-style: italic;
+    }
+    footer{
+        font-size: small;
+        display: flex;
+        justify-content: space-between;
+    }
+    #social-media-links {
+    /* How do I include links without adding to HTML? */
+    }
+}
+
+
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width:768px) { /* ... */ }
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width:992px) { /* ... */ }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media screen and (min-width:1200px) { /* ... */ }

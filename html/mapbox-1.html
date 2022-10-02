@@ -1,0 +1,58 @@
+<!--
+TODO: Mini - Exercise 1 (after customizing map)
+
+Create an HTML file called mapbox-1.html
+
+In this file, create a Mapbox map that shows your home town. After 5 seconds, have the map automatically change to a map of the entire United States using a satellite style. Use a setTimeout function to achieve this.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox 1</title>
+    <!-- Mapbox CSS -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <!-- Custom CSS -->
+    <style>
+        #map {
+            /* the width and height may be set to any size */
+            width: 100%;
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>I Do Not Have A Hometown, But . . . .</h1>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+
+<!-- Mapbox JS -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+
+<script src="../js/keys.js"></script>
+
+
+<!-- Custom JS -->
+<script>
+    mapboxgl.accessToken = MAPBOX_TOKEN;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 15,
+        center: [-27.085639, 38.769649]
+    });
+
+//    After 5 seconds, zoom out to entire U.S. w/ satellite style
+//    Use timeout function
+//    Used Instructor's code, verbatim, and didn't work.
+    setTimeout(function () {
+        map.setCenter([-27.085639, 38.769649]);
+        map.setZoom(3);
+        map.setStyle("mapbox://styles/mapbox/satellite-v9");
+    }, 5000);
+</script>
+</body>
+</html>

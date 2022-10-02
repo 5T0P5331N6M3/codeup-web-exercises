@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1 id="header">This is my header.</h1>
+<p id="content">This is my content.</p>
+<p id="sub-content">This is my sub-content</p>
+<button type="submit">Submit</button>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+var header = $("#header");
+header.click();
+
+var fun = function () {
+    console.log("my click event");
+}
+header.click(fun);
+// $("p").dbclick()
+
+var content = $("#content");
+
+content.dblclick(function(e) {
+    console.log("event listener fired off");
+    alert(content.html());
+})
+
+var subContent = $("sub-content");
+console.log(subContent.html())
+
+var handlerIn = function (){
+    // alert("I hovered in.");
+    subContent.css("background", "yellow");
+}
+var handlerOut = function () {
+    // alert("I hovered out.");
+    subContent.css("background", "green");
+}
+subContent.css("font-size", "25px");
+
+
+// subContent.hover(handlerIn, handlerOut);
+//I'm lost with Jordy's instruction.
+// var submit = $("submit");
+//
+// submit.hover(function(e){
+//     console.log("button submitted");
+//     alert(submit.html());
+// })
+</script>
+</body>
+</html>
