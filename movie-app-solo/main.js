@@ -1,7 +1,7 @@
 'use strict';
 const url = 'https://www.omdbapi.com/?i=tt3896198&apikey=' + OMDB_KEY + '&t=' + encodeURI();
 
-//staticList will be rows of movies in genres, never changing
+//staticList will be rows of movies in genres, never changing (DOES THIS RETURN MULTIPLE RESULTS see '&s=title': ??
 const staticList = 'https://www.omdbapi.com/?i=tt3896198&apikey=' + OMDB_KEY + '&s=title' + encodeURI("");
 
 const moviesBody = document.getElementById('movies');
