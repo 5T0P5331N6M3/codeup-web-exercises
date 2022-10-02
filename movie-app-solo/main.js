@@ -10,10 +10,16 @@ let randomMovie = randomMovieArray[randomNumber];
 const url = 'https://www.omdbapi.com/?i=tt3896198&apikey=' + OMDB_KEY + '&t=' + encodeURI(randomMovie)
 
 function apiCall() {
+    console.log(randomMovie)
     $.getJSON(url)
         .then(function (response) {
         console.log(response);
+            let image = response.Poster;
+            if(image !== "N/A") {
+                $('img').attr('src', image);
+            }
     });
+    
 }
 apiCall();
 
