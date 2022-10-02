@@ -7,8 +7,10 @@ let randomNumber = Math.floor((Math.random() * randomMovieArray.length -1) +1);
 let randomMovie = randomMovieArray[randomNumber];
 // console.log(randomMovie);
 
+const url = 'https://www.omdbapi.com/?i=tt3896198&apikey=' + OMDB_KEY + '&t=' + encodeURI(randomMovie)
+
 function apiCall() {
-    $.getJSON('https://www.omdbapi.com/?s=' + '&apikey=' + OMDB_KEY + encodeURI(randomMovie))
+    $.getJSON(url)
         .then(function (response) {
         console.log(response);
     });
