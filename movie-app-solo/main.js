@@ -30,14 +30,15 @@ function apiCall() {
             }
     });
 }
-apiCall();
+// apiCall();
+$('#search-movie').click(function () {
+    apiCall();
+});
 
 $.get(url, function(data) {
     console.table(data);
 });
-// $('button').click(function () {
-//     apiCall();
-// });
+
 
 // align with staticList-getting tired right now
 function staticMovies(movies) {
