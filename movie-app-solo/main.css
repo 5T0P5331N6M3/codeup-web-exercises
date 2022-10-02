@@ -3,7 +3,13 @@ body {
     /*background: url("Images/Blockbuster_logo.svg") no-repeat top;*/
     font-family: "American Typewriter", cursive;
 }
-.nav-item a {
+.navbar-toggler:hover {
+    background-color: #FFA903;
+}
+.navbar-brand {
+    color: #FFA903;
+}
+#navParent a{
     color: #FFA903;
 }
 .container {

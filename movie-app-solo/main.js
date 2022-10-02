@@ -6,12 +6,13 @@
 //
 // let randomMovie = randomMovieArray[randomNumber];
 // // console.log(randomMovie);
+//Below code was inside/below apiCall function.
+// let randomNumber = Math.floor((Math.random() * randomMovieArray.length -1) +1);
+// let randomMovie = randomMovieArray[randomNumber];
 
 const url = 'https://www.omdbapi.com/?i=tt3896198&apikey=' + OMDB_KEY + '&t=' + encodeURI()
 
 function apiCall() {
-    // let randomNumber = Math.floor((Math.random() * randomMovieArray.length -1) +1);
-    // let randomMovie = randomMovieArray[randomNumber];
     $.getJSON(url)
         .then(function (response) {
         console.log(response);
@@ -21,11 +22,12 @@ function apiCall() {
             }
     });
 }
-// apiCall();
+apiCall();
 
-$('button').click(function () {
-    apiCall();
-});
+
+// $('button').click(function () {
+//     apiCall();
+// });
 
 
 
