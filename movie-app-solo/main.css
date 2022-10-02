@@ -1,11 +1,18 @@
+body {
+    background-size: cover;
+    background: url("Images/Blockbuster_logo.svg") no-repeat top;
+    font-family: "American Typewriter", cursive;
+}
 .container {
     text-align: center;
-    margin: auto;
+    margin-top: 20em;
     font-weight: 300;
 }
 .container h3 {
+    margin-bottom: 2em;
     font-weight: normal;
     color: #0C6EFD;
+    transform: rotate(-10deg);
 }
 img {
     border: 2px solid black;
