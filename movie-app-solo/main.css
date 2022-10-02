@@ -9,7 +9,27 @@
 }
 img {
     border: 2px solid black;
-
+    border-radius: 30px;
+    opacity: 0.5;
+    transition: 0.25s ease-in-out;
+}
+img:hover {
+    opacity: 1;
+}
+button  {
+    /*cursor: pointer;*/
+    transition: 0.25s ease-in-out;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+    color: #f1ec09;
+    background-color: #0f3cf3;
+    outline: none;
+}
+button:hover {
+    background-color: #f1ec09;
+    color: #0f3cf3;
 }
 /* Small devices (phones and pocket devices, 576 and up) */
 /*@media screen and (min-width: 576px) {*/

@@ -1,4 +1,33 @@
 'use strict';
+let randomMovieArray = ['Game of Thrones', 'Star Wars', 'SuperTroopers', 'Clerks', 'Ready Player One'];
+
+let randomNumber = Math.floor((Math.random() * randomMovieArray.length -1) +1);
+// console.log(randomNumber);
+
+let randomMovie = randomMovieArray[randomNumber];
+// console.log(randomMovie);
+
+function apiCall() {
+    $.getJSON('https://www.omdbapi.com/?s=' + '&apikey=' + OMDB_KEY + encodeURI(randomMovie))
+        .then(function (response) {
+        console.log(response);
+    });
+}
+apiCall();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* LOADER */
 // document.onreadystatechange = function () {
@@ -55,7 +84,7 @@
 // fetchFavoriteMovies();
 
 // function fetchFavoriteMovies() {
-//     fetch('http://www.omdbapi.com/?apikey=${OMDB_KEY}&\n')
+//     fetch('https://www.omdbapi.com/?s=&apikey=' + OMDB_KEY)
 //          .then(response => {
 //              console.log(response);
 //              // const data = response.json();
