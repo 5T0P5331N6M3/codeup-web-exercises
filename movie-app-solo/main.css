@@ -23,6 +23,10 @@ img {
 img:hover {
     opacity: 1;
 }
+.store-background {
+    width: 500px;
+    height: 520px;
+}
 button  {
     /*cursor: pointer;*/
     transition: 0.25s ease-in-out;
