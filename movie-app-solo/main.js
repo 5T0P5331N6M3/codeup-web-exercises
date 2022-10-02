@@ -1,4 +1,14 @@
 'use strict';
+const url = 'https://www.omdbapi.com/?i=tt3896198&apikey=' + OMDB_KEY + '&t=' + encodeURI();
+
+//staticList will be rows of movies in genres, never changing
+const staticList = 'https://www.omdbapi.com/?i=tt3896198&apikey=' + OMDB_KEY + '&s=title' + encodeURI("");
+
+const moviesBody = document.getElementById('movies');
+
+const searchMovie = document.getElementById('search-movie');
+
+
 // let randomMovieArray = ['Game of Thrones', 'Star Wars', 'SuperTroopers', 'Clerks', 'Ready Player One'];
 //
 // let randomNumber = Math.floor((Math.random() * randomMovieArray.length -1) +1);
@@ -9,9 +19,7 @@
 //Below code was inside/below apiCall function.
 // let randomNumber = Math.floor((Math.random() * randomMovieArray.length -1) +1);
 // let randomMovie = randomMovieArray[randomNumber];
-
-const url = 'https://www.omdbapi.com/?i=tt3896198&apikey=' + OMDB_KEY + '&t=' + encodeURI()
-
+/* Fetches OMDB Data and replaces static image with movie poster */
 function apiCall() {
     $.getJSON(url)
         .then(function (response) {
@@ -24,12 +32,17 @@ function apiCall() {
 }
 apiCall();
 
-
+$.get(url, function(data) {
+    console.table(data);
+});
 // $('button').click(function () {
 //     apiCall();
 // });
 
-
+// align with staticList-getting tired right now
+function staticMovies(movies) {
+    moviesBody.insertAdjacentHTML()
+}
 
 
 
